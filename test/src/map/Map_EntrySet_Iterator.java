@@ -5,7 +5,7 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.Set;
 
-public class MapEntrySet
+public class Map_EntrySet_Iterator
 {
 	public static void main(String[] args)
 	{
