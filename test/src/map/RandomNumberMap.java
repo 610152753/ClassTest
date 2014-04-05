@@ -15,7 +15,6 @@ public class RandomNumberMap
 
 	public static void main(String[] args)
 	{
-
 		Map map = new TreeMap(); // 有序(升序，自然顺序)的映像(Map)，key存放的是:随机数，value存放的是:随机数出现的次数
 
 		List list = new ArrayList(); // 存放出现次数最多的那些数字
