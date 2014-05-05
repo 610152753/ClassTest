@@ -35,7 +35,7 @@ class Person
 	}
 }
 
-class MyObjComparator implements Comparator
+class MyObjComparator implements Comparator<Object>
 {
 	public int compare(Object o1, Object o2)
 	{
