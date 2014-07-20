@@ -9,8 +9,10 @@ public class DumpMethods
 	public static void main(String[] args) throws ClassNotFoundException
 	{
 		//Class 类是java反射的入口点
-		Class<?> classType = Class.forName(args[0]); 
+		//获取类的class对象
 		
+//		Class<?> classType = Class.forName("java.lang.String"); 
+		Class<?> classType = Class.forName(args[0]); 
 			Method[] methods = classType.getDeclaredMethods();
 			
 			for(Method method : methods){
