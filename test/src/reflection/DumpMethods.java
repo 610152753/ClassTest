@@ -2,6 +2,17 @@ package reflection;
 
 import java.lang.reflect.Method;
 
+/**
+ * 
+ * 获取某个类或者某个对象所对应的Class对象的常用的三种方式
+ * 1.使用Class类的静态方法：forName:Class.forName("java.lang.String");
+ * 2.使用类的.class语法：String.class;
+ * 3.使用对象的getClass()方法:String s = "aa"; 
+ *   Class<?> class = s.getClass();
+ * 
+ * @author JoePotter
+ *
+ */
 public class DumpMethods
 {
 	// 从命令行接受一个字符串(该字符串是某个类的全名)
