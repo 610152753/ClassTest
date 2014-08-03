@@ -10,7 +10,7 @@ public class DeprecatedTest
 {
 	
 	/**
-	 * 自定义的annocation
+	 * 自定义的annotation
 	 */
 	@Deprecated
 	public void doSomething()
