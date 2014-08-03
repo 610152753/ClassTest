@@ -1,4 +1,4 @@
-package annocationTest;
+package annotationTest;
 
 /**
  * 
