@@ -1,1 +1,13 @@
-/junitTest
+/annotationTest
+/collection
+/common
+/csvUtil
+/databaseOption
+/editData
+/enumeration
+/exceptionTest
+/gbkHeaderLetter
+/generics
+/MyFrame.class
+/awtGui
+/tmpTest

@@ -1,0 +1,38 @@
+package awtGui;
+
+import java.awt.Button;
+import java.awt.FlowLayout;
+import java.awt.Frame;
+
+public class ExGui
+{
+	private Frame frame;
+	
+	private Button button1;
+	
+	private Button button2;
+	
+	public void go()
+	{
+		frame = new Frame("GUI Example");
+		
+//		frame.setLayout(new FlowLayout());
+		
+		button1 = new Button("Press me");
+		button2 = new Button("Don't Press me");
+		
+		frame.add(button1);
+		frame.add(button2);
+		frame.pack();
+		
+		frame.setVisible(true);
+	}
+	
+	public static void main(String[] args)
+	{
+		ExGui exGui = new ExGui();
+		
+		exGui.go();
+		
+	}
+}
