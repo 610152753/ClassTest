@@ -30,6 +30,7 @@ class MyJframeHandler extends WindowAdapter
 	@Override
 	public void windowClosing(WindowEvent e)
 	{
+		super.windowClosing(e);
 		System.exit(0);
 	}
 }
