@@ -2,13 +2,16 @@ package calcTool;
 
 import java.awt.BorderLayout;
 import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.WindowAdapter;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
-public class CalcFrame
+public class CalcFrame implements ActionListener
 {
 	private JFrame jFrame;
 	private JPanel jPanel;
@@ -105,25 +108,31 @@ public class CalcFrame
 			
 			buttonf = new JButton("=");
 			buttonf.setSize(60, 60);
+			buttonf.addActionListener(this);
 			jPanel.add(buttonf);
 			
 			buttond = new JButton("/");
 			buttond.setSize(60, 60);
+			buttond.addActionListener(this);
 			jPanel.add(buttond);
 			
 			
 			jFrame.add(jPanel,BorderLayout.CENTER);
 			jFrame.pack();
-			
+			jFrame.setResizable(false);;
 			
 			jFrame.setVisible(true);
-			
-			
 			
 		}
 	}
 	
-	
+	public void actionPerformed(ActionEvent e)
+	{
+		System.out.println(e.getActionCommand());
+		textField.setText(e.getActionCommand());
+	}
+
+
 	public static void main(String[] args)
 	{
 		CalcFrame calcFrame = new CalcFrame();
