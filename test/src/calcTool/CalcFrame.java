@@ -4,7 +4,6 @@ import java.awt.BorderLayout;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.WindowAdapter;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -44,7 +43,6 @@ public class CalcFrame implements ActionListener
 			textField.setSize(240, 60);
 			jFrame.setLayout(new BorderLayout(5,5));
 			jFrame.add(textField,BorderLayout.NORTH);
-//			jFrame.add(textField);
 			
 			jPanel = new JPanel();
 			jPanel.setLayout(new GridLayout(4,4,5,5));
@@ -131,7 +129,6 @@ public class CalcFrame implements ActionListener
 		System.out.println(e.getActionCommand());
 		textField.setText(e.getActionCommand());
 	}
-
 
 	public static void main(String[] args)
 	{
