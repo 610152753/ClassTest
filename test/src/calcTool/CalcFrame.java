@@ -41,6 +41,7 @@ public class CalcFrame implements ActionListener
 //			jFrame.setSize(240, 280);
 			textField = new JTextField();
 			textField.setSize(240, 60);
+			textField.setHorizontalAlignment(JTextField.RIGHT);
 			jFrame.setLayout(new BorderLayout(5,5));
 			jFrame.add(textField,BorderLayout.NORTH);
 			
