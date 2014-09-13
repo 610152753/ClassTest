@@ -6,6 +6,8 @@ public class ApplicationRunMain {
 		
 		ApplicationRunTool app = new ApplicationRunTool();
 		
-		app.run(ApplicationRunTest.class);
+		int re = (Integer)app.run(ApplicationRunTest.class,new Integer[]{3,4});
+		
+		System.out.println(re);
 	}
 }

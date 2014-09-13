@@ -6,7 +6,7 @@ import java.lang.reflect.Method;
 public class ApplicationRunTool {
 	
 //	public void run(String className) throws Exception
-	public void run(Class<?> classType) throws Exception
+	public Object run(Class<?> classType,Object obj[]) throws Exception
 	{
 		//获取类的class对象
 //		Class<?> classType = Class.forName(className);
@@ -19,14 +19,22 @@ public class ApplicationRunTool {
 		
 		for(Method  mthd: methods)
 		{
-			System.out.println(mthd);
-			if(mthd.isAnnotationPresent(AnnotationTestTool.class) && mthd.getParameterCount() == 0
-					&& "void".equals(mthd.getReturnType().toString())) 
+			if(mthd.isAnnotationPresent(AnnotationTestTool.class) 
+					&& mthd.getParameterCount() == 2
+//					&& "void".equals(mthd.getReturnType().toString())) 
+					)
 			{
 				//调用这个对象的方法
 				try {
 					mthd.setAccessible(true);   //禁止java的访问控制检查
-					mthd.invoke(invokeTester);
+					
+					if (mthd.getParameterCount() > 0) {
+						Object ret = (Integer) mthd.invoke(invokeTester, obj);
+						return ret;
+					} else {
+						int ret = (Integer) mthd.invoke(invokeTester);
+						return ret;
+					}
 					
 				} catch (IllegalArgumentException e) {
 					e.printStackTrace();
@@ -34,8 +42,8 @@ public class ApplicationRunTool {
 					e.printStackTrace();
 				}
 			}
-
 		}
+		return 0;
 		
 	}
 

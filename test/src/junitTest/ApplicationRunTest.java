@@ -19,6 +19,13 @@ public class ApplicationRunTest {
 		return a + b;
 	}
 	
+	
+	@AnnotationTestTool
+	public int add(int b)
+	{
+		return b + 10;
+	}
+	
 	@AnnotationTestTool
 	public void doSomething(String str)
 	{
