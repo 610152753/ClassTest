@@ -1,4 +1,4 @@
-package digitConverToChineseCharacters;
+package digitConverToChineseCharactersTool;
 
 
 /**
