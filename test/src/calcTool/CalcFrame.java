@@ -33,11 +33,12 @@ public class CalcFrame implements ActionListener {
 	private JButton buttonf;
 	private JTextField textField;
 
-	//参考模式 ：A 运算符 B 运算符 (1+11+  显示  ：12+ )  
+	//参考模式 ：A 运算符a B 运算符b (1+11+  显示  ：12+ )  
 	
 	private String strVal;  //接受数字用的临时变量
 	private String cflag;   //连续输入多个运算符的时用的控制变量
-	private String equflag = "0";  //多次输入等号的时候用的控制变量
+	private String equflag = "0";  //多次输入等号的时候用的控制变量(运算符号发生过一次变化)
+	private String equflag1 = "0";  //多次输入等号的时候用的控制变量(运算符号没有发生变化)
 	private String strVaDisp;  //显示用的变量
 	private String calcValA;  //运算数A
 	private String calcValB;  //运算数B
@@ -151,6 +152,7 @@ public class CalcFrame implements ActionListener {
 	public void actionPerformed(ActionEvent e)
 	{
 		System.out.println(e.getActionCommand());
+		//获取输入的数字，并赋值给显示用的变量
 		if(isNumeric(e.getActionCommand()))
 		{
 			if(strVal != null)
@@ -167,15 +169,27 @@ public class CalcFrame implements ActionListener {
 			}
 			else
 			{
-				strVaDisp = calcValA + optionFlagA + strVal; 
+				//多次输入等号后再次输入运算数的处理
+				if(equflag == "1" || equflag1 == "1")
+				{
+					strVaDisp = strVal;
+					equflag = "0";
+					strVal = null;
+				}
+				else
+				{
+					strVaDisp = calcValA + optionFlagA + strVal; 
+				}
+
 			}
+			//输入的是等号时
 		}else if(e.getActionCommand() == "=")
 		{
-
-			
+			//当输入的算式是这样样式(A 运算符)时：再次输入等号做一下处理。
 			if(calcValA != null && optionFlagA != null && strVal == null)
 			{
-				if(equflag == "0")
+				//多次连续输入等号的处理，如果运算符发生变化时，将运算数calcValB改为当前的A，再此连续的运算
+				if(equflag == "0" && equflag1 == "0")
 				{
 					calcValBTemp = calcValA;
 					equflag = "1";
@@ -186,12 +200,36 @@ public class CalcFrame implements ActionListener {
 				calcValB = null;
 				strVal = null;
 			}
+			//两个运算数和一个运算符都已经正常获取后，再次输入了等号的处理,没有清空optionFlagA是为了连续再次输入等号用，
+			//实现连续的运算
+			if(calcValA != null && optionFlagA != null && strVal != null)
+			{
+				//除数为0的处理
+				if(optionFlagA == "/" && strVal == "0")
+				{
+					calcValA = null;  //清空运算数A
+					optionFlagA = null; //清空运算符a
+					strVaDisp = "除数为零重新输入！";  //显示信息赋值
+				}
+				else
+				{
+					equflag1 = "1";
+					calcValBTemp = strVal;
+					calcValB = strVal;
+					calcValA = clac();
+					strVaDisp = calcValA;
+					calcValB = null;
+					strVal = null;
+				}
+
+			}
 			
 		}
 		else
 		{
-			//多次输入等号的时候，控制运算数calcValB的变化
+			//多次输入等号的时候，控制运算数calcValB的变化的变量
 			equflag = "0";
+			equflag1 = "0";
 			
 			if(strVal == null)
 			{
@@ -199,9 +237,8 @@ public class CalcFrame implements ActionListener {
 				strVal = "0";
 				// 连续输入多个运算符的情况，cflag = "1"
 				cflag = "1";
-				System.out.println("testaa");
 			}
-			
+			//第一次输入运算符的处理
 			if(calcValB == null && optionFlagA == null)
 			{
 				optionFlagA = e.getActionCommand();
@@ -209,6 +246,7 @@ public class CalcFrame implements ActionListener {
 			}
 			else
 			{
+				//连续输入多个运算符的时候运算符的处理
 				if(calcValA != null && optionFlagA != null && cflag == "1")
 				{
 					optionFlagA = e.getActionCommand();
@@ -216,13 +254,14 @@ public class CalcFrame implements ActionListener {
 					cflag = "0";
 				}
 				else
+				//输入第二个运算数后再次输入的运算符的处理
 				{
 					optionFlagB = e.getActionCommand();
 					strVaDisp = strVal + optionFlagB;
 					System.out.println("optionFlagB set ");
 				}
 			}
-			
+			//将接受的运算数分别赋值给相应的变量方便调用共通方法
 			if(calcValA != null && calcValB == null && optionFlagB != null)
 			{
 				calcValB = strVal;
@@ -231,30 +270,35 @@ public class CalcFrame implements ActionListener {
 			{
 				calcValA = strVal;
 			}
-			strVal = null;
+			strVal = null;  //清空接受运算数的变量
+			
+			//如果有两个运算数都不为空的时候的处理
 			if(calcValA != null && calcValB != null)
 			{
 
+				//除数为0的处理
 				if(optionFlagA == "/" && calcValB == "0")
 				{
-					calcValA = null;
-					optionFlagA = null;
-					strVaDisp = "除数为零重新输入！";
+					calcValA = null;  //清空运算数A
+					optionFlagA = null; //清空运算符a
+					strVaDisp = "除数为零重新输入！";  //显示信息赋值
 				}
 				else
+				//两个运算数都正常调用运算方法，并将结果返回给第一个运算数，将第二次接受的运算符b赋值给运算符a
 				{
 					calcValA = clac();
 					optionFlagA = optionFlagB;
 					strVaDisp = calcValA + optionFlagA;
 				}
-				calcValB = null;
-				optionFlagB = null;
+				calcValB = null;   //清空运算数B
+				optionFlagB = null;  //清空运算符b
 			}
 
 		}
-		textField.setText(strVaDisp);
+		textField.setText(strVaDisp);  //显示相应的信息
 	}
 
+	//加减乘除运算方法
 	public String clac() {
 		
 		double A = Double.parseDouble(calcValA);
@@ -286,7 +330,7 @@ public class CalcFrame implements ActionListener {
 
 	}
 
-	// 使用正则表达式
+	// 使用正则表达式，判断当前输入的字符是否是数字或者小数点
 	public boolean isNumeric(String str) {
 		Pattern pattern = Pattern.compile("[0-9]|\\.");
 		Matcher isNum = pattern.matcher(str);
