@@ -3,6 +3,13 @@ package junitTest;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
+/**
+ * 
+ * 自己实现简单的Junit工具
+ * 使用注解来
+ *
+ */
+
 public class ApplicationRunTool {
 	
 //	public void run(String className) throws Exception
