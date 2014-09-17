@@ -12,6 +12,7 @@ public class FileTest2 {
 		for(String name : names)
 		{
 			System.out.println(name);
+			System.out.println(file.getParent());
 		}
 		
 		File[] files = file.listFiles();
