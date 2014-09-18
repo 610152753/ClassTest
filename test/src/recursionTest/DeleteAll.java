@@ -42,11 +42,10 @@ public class DeleteAll {
 			for (File f : files) {
 
 				delAll1(f);
-				f.delete();
 			}
 			
 			//最后删除自己文件夹，最后的处理
-			file.delete();
+			System.out.println(file.delete());
 		}
 
 	}
