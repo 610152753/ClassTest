@@ -8,7 +8,8 @@ import java.util.List;
 
 public class DirTree {
 	
-	String space = "";
+	//控制目录层次的退格
+	private String space = "";
 	
 	
 	public void tree(File file)
