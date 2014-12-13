@@ -13,6 +13,14 @@ public class Client {
 		
 		component2.dosomething();
 		
+		//下面的方法和上面的方法实现的功能是一样的。
+		System.out.println("||-------------------------------||");
+		
+		Component conponentAll = new ConcreteDecorator1(new ConcreteDecorator(new ConcreteConponent()));
+		
+		conponentAll.dosomething();
+		
+		
 	}
 
 }
