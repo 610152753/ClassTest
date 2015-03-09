@@ -10,7 +10,7 @@ import java.util.Set;
  * @author JoePotter
  *
  */
-public class PropertiesTest
+public class PropertiesGetCharSet
 {
 	public static void main(String[] args)
 	{
