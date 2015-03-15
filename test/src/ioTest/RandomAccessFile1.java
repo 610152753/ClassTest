@@ -91,6 +91,5 @@ class Person
 		this.Name = raf.readUTF();
 		this.height = raf.readDouble();
 	}
-	
-	
+
 }
