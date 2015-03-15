@@ -101,8 +101,4 @@ class Person1 implements Serializable
 		this.height = height;
 	}
 	
-	
-	
-	
-	
 }
