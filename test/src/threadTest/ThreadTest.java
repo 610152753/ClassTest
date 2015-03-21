@@ -33,6 +33,11 @@ package threadTest;
 	3.线程的消亡不能通过调用一个stop()命令。而是让run()方法自然结束。
  * 
  * 
+ * 线程的生命周期可分为四个状态：
+ * 1.创建状态
+ * 2.可运行状态
+ * 3.不可运行状态
+ * 4. 消亡状态
  * 
  * 
  * 
@@ -44,13 +49,20 @@ public class ThreadTest {
 		FirstThread ft = new FirstThread();
 		PrimeRun pr = new PrimeRun();
 
-		
 		ft.start();
 		new Thread(pr).start();
 		
 	}
 }
 
+/**
+ * 
+ * 
+ * 需要重写run方法，因为Thread类的run方法此时什么事情也不做
+ * 
+ * @author Joe
+ *
+ */
 class FirstThread extends Thread
 {
 	@Override
@@ -63,6 +75,16 @@ class FirstThread extends Thread
 	}
 }
 
+/**
+ * 
+ * 需要实现Runnable接口的run方法，然后使用new Thread(new MyThread())(假如MyThread实现了Runnable接口)
+ * 来生成线程对象，这时的线程对象的run方法或调用MyThread类的run方法，这样我们自己编写的run方法就执行了。
+ * 
+ * 
+ * 
+ * @author Joe
+ *
+ */
 class PrimeRun implements Runnable
 {
 	public void run() {
