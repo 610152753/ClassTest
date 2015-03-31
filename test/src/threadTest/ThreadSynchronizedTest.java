@@ -5,7 +5,7 @@ package threadTest;
  * 重点理解★
  * 
  * java中的每个对象都有一个锁(lock)或者叫做监视器(monitor),当访问某个对象的synchronized方法时
- * ，表示将“该对象上锁”,此时其他任何线程都无法再去访问该synchronized方法了，直到之前的那个线程执行完毕后
+ * ，表示将“该类的对象上锁”,此时其他任何线程都无法再去访问该synchronized方法了，直到之前的那个线程执行完毕后
  * (或者是异常抛出了)，那么将该对象的锁释放掉，其他线程才有可能再去访问该synchronized方法。
  * 
  * 如果一个对象有多个synchronized方法，某一时刻某个线程已经进入到了某个synchronized方法，那么现在
@@ -41,7 +41,7 @@ public class ThreadSynchronizedTest
  * 恰好就是要控制类的所有实例的访问了，static synchronized是限制线程同时访问jvm中该类的所有实例同时访问对应的代码快。
  * 实际上，在类中某方法或某代码块中有 synchronized，那么在生成一个该类实例后，
  * 改类也就有一个监视快，放置线程并发访问改实例synchronized保护快，
- * 而static synchronized则是所有该类的实例公用一个监视块了，
+ * 而static synchronized则是所有该类的实例公用一个监视块了，(即给该类的class对象上锁)
  * 也就是两个的区别了,也就是synchronized相当于 this.synchronized，而
  * static synchronized相当于Something.synchronized.
  * 
