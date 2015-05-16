@@ -1,4 +1,4 @@
-package socket;
+package netWork.socket;
 
 import java.io.*;
 
