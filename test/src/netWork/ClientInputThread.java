@@ -6,37 +6,32 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.Socket;
 
-public class ServerInputThread extends Thread 
+public class ClientInputThread extends Thread 
 {
 
 	private Socket socket;
 	
-	public ServerInputThread(Socket socket)
+	public ClientInputThread(Socket socket)
 	{
 		this.socket = socket;
 	}
-	
+
 	@Override
 	public void run() {
-		
+
 		try {
-			
+		
 			InputStream is = socket.getInputStream();
+
+			BufferedReader buffer = new BufferedReader(new InputStreamReader(is));
 			
-			while(true)
-			{
-				BufferedReader buff = new BufferedReader(new InputStreamReader(is));
-				
-				//如果读取的内容没有的话，程序一直在readLine处等待
-				String str =  buff.readLine();
-				
-			    System.out.println(str);
-			}
+			String str =  buffer.readLine();
 			
+			System.out.println(str);
+		
+		
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		
 	}
-	
 }
