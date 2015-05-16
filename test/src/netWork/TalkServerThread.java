@@ -16,6 +16,7 @@ public class TalkServerThread {
 		
 		//Æô¶¯¶ÁÐ´Ïß³Ì
 		
+		
 		new ServerInputThread(socket).start();
 		new ServerOutputThread(socket).start();
 		

@@ -27,7 +27,7 @@ public class ClientInputThread extends Thread
 			
 			String str =  buffer.readLine();
 			
-			System.out.println(str);
+			System.out.println("received msg £º" + str);
 		
 		
 		} catch (IOException e) {

@@ -30,7 +30,7 @@ public class ServerInputThread extends Thread
 				//如果读取的内容没有的话，程序一直在readLine处等待
 				String str =  buff.readLine();
 				
-			    System.out.println(str);
+				System.out.println("received msg ：" + str);
 			}
 			
 		} catch (IOException e) {

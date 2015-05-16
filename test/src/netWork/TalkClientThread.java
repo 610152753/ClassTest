@@ -11,8 +11,9 @@ public class TalkClientThread {
 
 		//Æô¶¯¶ÁÐ´Ïß³Ì
 			
-		new ClientOutputThread(socket).start();
 		new ClientInputThread(socket).start();
+		new ClientOutputThread(socket).start();
+
 			
 	}
 }
