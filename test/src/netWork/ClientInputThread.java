@@ -23,13 +23,16 @@ public class ClientInputThread extends Thread
 		
 			InputStream is = socket.getInputStream();
 
-			BufferedReader buffer = new BufferedReader(new InputStreamReader(is));
-			
-			String str =  buffer.readLine();
-			
-			System.out.println("received msg £º" + str);
-		
-		
+			while (true) {
+				
+				BufferedReader buffer = new BufferedReader(new InputStreamReader(is));
+				
+				String str =  buffer.readLine();
+				
+				System.out.println("received msg from server£º" + str);
+				
+			}
+
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

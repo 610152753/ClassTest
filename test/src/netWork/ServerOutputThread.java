@@ -27,9 +27,10 @@ public class ServerOutputThread extends Thread
 				//由Socket对象得到输出流，并构造PrintWriter对象
 				PrintWriter pw = new PrintWriter(os);
 				
+				System.out.println("1111111111====");
 				//由系统标准输入设备构造BufferedReader对象
 				BufferedReader buffer = new BufferedReader(new InputStreamReader(System.in));
-
+				System.out.println("3333333333====");
 				//从系统标准输入读入一字符串
 				String str = buffer.readLine();
 				

@@ -514,9 +514,10 @@ public class GgkCodePage936HeadLetter{
 		return pyBuffer.toString().trim().toLowerCase();
 	}
 
-	public static void main(String[] args)
+	public static String Get(String[] args)
 	{
 		System.out.println(GgkCodePage936HeadLetter.getGBKpy(args[0]).toUpperCase().toString());
+		return GgkCodePage936HeadLetter.getGBKpy(args[0]).toUpperCase().toString();
 	}
 	
 	

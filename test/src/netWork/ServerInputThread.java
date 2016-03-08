@@ -25,12 +25,14 @@ public class ServerInputThread extends Thread
 			
 			while(true)
 			{
+				System.out.println("ServerInputThread 1");
 				BufferedReader buff = new BufferedReader(new InputStreamReader(is));
-				
+				System.out.println("ServerInputThread 2");
 				//如果读取的内容没有的话，程序一直在readLine处等待
 				String str =  buff.readLine();
+				System.out.println("ServerInputThread 3");
 				
-				System.out.println("received msg ：" + str);
+				System.out.println("received msg From Client：" + str);
 			}
 			
 		} catch (IOException e) {

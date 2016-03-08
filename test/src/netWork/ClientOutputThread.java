@@ -7,6 +7,7 @@ import java.io.OutputStream;
 import java.io.PrintWriter;
 import java.net.Socket;
 
+
 public class ClientOutputThread extends Thread 
 {
 
@@ -36,6 +37,11 @@ public class ClientOutputThread extends Thread
 				//从系统标准输入读入一字符串
 				String str = buffer.readLine();
 				
+				if("bye".equals(str))
+				{
+					System.out.println("bye========");
+					System.exit(0);
+				}
 				//将从系统标准输入读入的字符串输出到Server
 				pw.println(str);
 				
@@ -43,8 +49,7 @@ public class ClientOutputThread extends Thread
 				pw.flush();
 
 			}
-		
-		
+			
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

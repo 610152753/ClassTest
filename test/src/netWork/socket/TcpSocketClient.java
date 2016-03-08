@@ -17,7 +17,7 @@ public class TcpSocketClient
 		
 		os.write("Hello World !".getBytes());
 		
-		byte[] buffer = new byte[200];
+		byte[] buffer = new byte[5];
 		
 		int length = is.read(buffer);
 		
