@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE 学生名册 SYSTEM "students.dtd">
+<学生名册>
+<学生 学号="t1">
+	<姓名>zhang san</姓名>
+	<性别>man</性别>
+	<年龄>30</年龄>
+</学生>
+<学生 学号="t2">
+	<姓名>li si</姓名>
+	<性别>woman</性别>
+	<年龄>28</年龄>
+</学生>
+
+</学生名册>
