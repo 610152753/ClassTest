@@ -34,7 +34,7 @@ public class DomRecursionTest {
 	public static void recursionElement(Element element)
 	{
 		
-		String elementname = element.getNodeName();
+		String elementname = element.getTagName();
 		
          System.out.print("<" + elementname);
          
@@ -66,7 +66,7 @@ public class DomRecursionTest {
         		 //递归入口
         		 recursionElement((Element)nl.item(i));
         	 }
-        	 //退出口
+        	 //递归退出口
         	 if(nodetype == Node.TEXT_NODE)
         	 {
         		 System.out.print(nl.item(i).getNodeValue());
