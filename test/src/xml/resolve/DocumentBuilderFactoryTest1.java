@@ -1,4 +1,4 @@
-package DomTest;
+package xml.resolve;
 
 import java.io.File;
 import java.io.IOException;
