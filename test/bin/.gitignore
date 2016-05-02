@@ -14,6 +14,7 @@
 /gbkHeaderLetter/
 /generics/
 /innerClass/
+/interviewTest/
 /ioTest/
 /junitTest/
 /log4j.properties
@@ -26,6 +27,10 @@
 /proxyTest/
 /recursionTest/
 /reflection/
-/DomTest/
-/interviewTest/
+/singleTest/
+/strategy/
+/strategyTestPerson/
+/swingTest/
+/threadTest/
+/tmpTest/
 /xml/
