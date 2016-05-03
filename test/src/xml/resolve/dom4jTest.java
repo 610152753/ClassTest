@@ -49,27 +49,7 @@ public class dom4jTest {
 		XMLWriter xmlw1 = new XMLWriter(new FileOutputStream(new File("dom4j.xml")),format);
 		
 		xmlw1.write(document);
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+
 	}
 
 }
