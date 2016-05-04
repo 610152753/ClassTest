@@ -1,0 +1,34 @@
+<project name="mybuild" basedir="." default="package">
+	
+	<property name="reportpath" value="rep"/>
+	<property name="compilepath" value="compile"/>
+	<property name="srcpath" value="src"/>
+	<property name="jarpath" value="jar"></property>
+	
+	<target name="init" depends="clean">
+	  <mkdir dir= "${reportpath}"/>
+	  <mkdir dir="${compilepath}"/>
+	  <mkdir dir="${srcpath} " />
+	  <mkdir dir="${jarpath}"/>
+	</target>
+	
+	
+	<target name="clean">
+		<delete dir="${reportpath}" />
+		<delete dir="${compilepath}" />
+		<delete dir="${srcpath} " />
+		<delete dir="${jarpath}"/>
+	</target>
+	
+	<target name="compile" depends="init,clean">
+		<javac srcdir="${srcpath}" destdir="${compilepath}"/>
+	</target>
+	
+	<target name="packagejar" depends="compile">
+		<jar destfile="${jarpath}/test.jar" basedir="${compilepath}" ></jar>
+	</target>
+	
+	<target name="package" depends="compile">
+		
+	</target>
+</project>
