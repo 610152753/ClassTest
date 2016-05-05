@@ -8,7 +8,6 @@
 	<target name="init" depends="clean">
 	  <mkdir dir= "${reportpath}"/>
 	  <mkdir dir="${compilepath}"/>
-	  <mkdir dir="${srcpath} " />
 	  <mkdir dir="${jarpath}"/>
 	</target>
 	
@@ -16,7 +15,6 @@
 	<target name="clean">
 		<delete dir="${reportpath}" />
 		<delete dir="${compilepath}" />
-		<delete dir="${srcpath} " />
 		<delete dir="${jarpath}"/>
 	</target>
 	
