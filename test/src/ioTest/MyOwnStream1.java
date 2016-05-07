@@ -30,7 +30,7 @@ public class MyOwnStream1 extends InputStream
 	}
 	
 	/**
-	 * ·µ»Ø»¹Ã»ÓĞ¶ÁÈ¡µÄ×Ö·û´®µÄ³¤¶È
+	 * è¿”å›è¿˜æ²¡æœ‰è¯»å–çš„å­—ç¬¦ä¸²çš„é•¿åº¦
 	 */
 	@Override
 	public int available() throws IOException {
@@ -38,7 +38,7 @@ public class MyOwnStream1 extends InputStream
 	}
 	
 	/**
-	 * Ä£Äâ¶Áµ½Êı¾İµÄ½áÎ²´¦
+	 * æ¨¡æ‹Ÿè¯»åˆ°æ•°æ®çš„ç»“å°¾å¤„
 	 */
 	@Override
 	public void close() throws IOException {
@@ -50,14 +50,14 @@ public class MyOwnStream1 extends InputStream
 
 		if(mark<0 || mark > data.length)
 		{
-			throw new IOException("The position is not valid £¡");
+			throw new IOException("The position is not valid ï¼");
 		}
 		
 		ptr = mark;
 	}
 	
 	/**
-	 * Ê¹markÓĞĞ§
+	 * ä½¿markæœ‰æ•ˆ
 	 */
 	@Override
 	public boolean markSupported() {
@@ -100,9 +100,9 @@ public class MyOwnStream1 extends InputStream
 		
 		MyOwnStream1 mosrm = new MyOwnStream1(b);
 		
-		//Ö¸¶¨ÏÂ´Î¶ÁÈ¡µÄÎ»ÖÃ
+		//æŒ‡å®šä¸‹æ¬¡è¯»å–çš„ä½ç½®
 		mosrm.mark(3);
-		//ĞèÒªÓÃreset·½·¨À´ÖØÖÃÏÂ´Î¶ÁÈ¡µÄÎ»ÖÃÎªmarkÖ¸¶¨µÄÎ»ÖÃ
+		//éœ€è¦ç”¨resetæ–¹æ³•æ¥é‡ç½®ä¸‹æ¬¡è¯»å–çš„ä½ç½®ä¸ºmarkæŒ‡å®šçš„ä½ç½®
 		mosrm.reset();
 		
 		while(true)

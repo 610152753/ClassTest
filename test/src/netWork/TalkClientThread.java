@@ -9,7 +9,7 @@ public class TalkClientThread {
 		
 		Socket socket = new Socket("127.0.0.1",6868);
 
-		//Æô¶¯¶ÁĞ´Ïß³Ì
+		//å¯åŠ¨è¯»å†™çº¿ç¨‹
 			
 		new ClientInputThread(socket).start();
 		new ClientOutputThread(socket).start();

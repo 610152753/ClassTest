@@ -7,9 +7,9 @@ import java.util.List;
 
 /**
  * 
- * ���������ϻ�����ʱ�������Ҫ���ʼ��ϻ�������±꣬
- * ��ô���ʹ�þ�ʽ�ķ�ʽʵ��ѭ�������������Ҫʹ����ǿ
- * ��forѭ������Ϊ����ʧ��С����Ϣ
+ * 当遍历集合或数组时，如果需要访问集合或数组的下标，
+ * 那么最好使用旧式的方式实现循环或遍历，而不要使用增强
+ * 的for循环，因为它丢失了小标信息
  * 
  * @author JoePotter
  *
@@ -21,7 +21,7 @@ public class ForTest
 	{
 		int[] arr = { 10, 22, 23, 54 };
 
-		//��ʽд��
+		//旧式写法
 		for (int i = 0; i < arr.length; i++)
 		{
 			System.out.println(arr[i]);
@@ -29,7 +29,7 @@ public class ForTest
 
 		System.out.println("--------------------------");
 		
-		//��ʽд�� ��ǿ��FORѭ��
+		//新式写法 增强的FOR循环
 		for(int element: arr)
 		{
 			System.out.println(element);

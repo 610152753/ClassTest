@@ -4,13 +4,13 @@ public class Client
 {
 	public static void main(String[] args)
 	{
-		//通过代理访问真是角色
+		//閫氳繃浠ｇ悊璁块棶鐪熸槸瑙掕壊
 		
 		ProxySubject  proxySubject = new ProxySubject();
 
 		proxySubject.request();
 		
-		//直接访问真实角色
+		//鐩存帴璁块棶鐪熷疄瑙掕壊
 		
 		RealSubject realSubject = new RealSubject();
 		

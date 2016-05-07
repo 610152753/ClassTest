@@ -4,13 +4,13 @@ public class FetchMoney {
 
 	public static void main(String[] args) {
 		
-		Bank bank = new Bank();  //Ò»¸öĞÂÕË»§
+		Bank bank = new Bank();  //ä¸€ä¸ªæ–°è´¦æˆ·
 		
-		Thread t1 = new MoneyThread(bank); //¹ñÌ¨
+		Thread t1 = new MoneyThread(bank); //æŸœå°
 		
 //		bank = new Bank();
 		
-		Thread t2 = new MoneyThread(bank); //×Ô¶¯È¡¿î»ú
+		Thread t2 = new MoneyThread(bank); //è‡ªåŠ¨å–æ¬¾æœº
 		
 		t1.start();
 		t2.start();
@@ -18,18 +18,18 @@ public class FetchMoney {
 	}
 }
 
-//synchronized¹Ø¼ü×Ö£ºµ±synchronized¹Ø¼ü×ÖĞŞÊÎÒ»¸ö·½·¨µÄÊ±ºò
-//¸Ã·½·¨½Ğ×öÍ¬²½·½·¨¡£
+//synchronizedå…³é”®å­—ï¼šå½“synchronizedå…³é”®å­—ä¿®é¥°ä¸€ä¸ªæ–¹æ³•çš„æ—¶å€™
+//è¯¥æ–¹æ³•å«åšåŒæ­¥æ–¹æ³•ã€‚
 
 class Bank
 {
 	
-	//¼ÓÉÏstaticµÄĞŞÊÎ·û¿ÉÒÔÊµÏÖ¶à¸öÓÃ»§¹«ÓÃÍ¬Ò»¸ö¶î¶È
+	//åŠ ä¸Šstaticçš„ä¿®é¥°ç¬¦å¯ä»¥å®ç°å¤šä¸ªç”¨æˆ·å…¬ç”¨åŒä¸€ä¸ªé¢åº¦
 //	private static int money = 1000;
 	private int money = 1000;
 
-	//ÔÚÏß³ÌÊ¹ÓÃÒ»¸ö×ÊÔ´µÄÊ±ÎªÆä¼ÓÉÏËø¼´¿É¡£·ÃÎÊ×ÊÔ´µÄµÚÒ»¸öÏß³ÌÎªÆä¼ÓÉÏËøÒÔºó
-	//ÆäËûÏß³Ì±ã²»ÄÜÔÚÊ¹ÓÃÄÇ¸ö×ÊÔ´£¬³ı·Ç±»½âËø¡£
+	//åœ¨çº¿ç¨‹ä½¿ç”¨ä¸€ä¸ªèµ„æºçš„æ—¶ä¸ºå…¶åŠ ä¸Šé”å³å¯ã€‚è®¿é—®èµ„æºçš„ç¬¬ä¸€ä¸ªçº¿ç¨‹ä¸ºå…¶åŠ ä¸Šé”ä»¥å
+	//å…¶ä»–çº¿ç¨‹ä¾¿ä¸èƒ½åœ¨ä½¿ç”¨é‚£ä¸ªèµ„æºï¼Œé™¤éè¢«è§£é”ã€‚
 	public synchronized  int getMoney(int number)
 	{
 		if(number < 0)

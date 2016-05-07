@@ -17,11 +17,11 @@ public class Log4jTest
 	{
 		Logger log = LogManager.getLogger(Log4jTest.class);
 		
-		log.info("infoÍ¨¹ı class ¶ÔÏóÀ´»ñÈ¡ logger ¶ÔÏó");
+		log.info("infoé€šè¿‡ class å¯¹è±¡æ¥è·å– logger å¯¹è±¡");
 		
-		log.debug("debugÍ¨¹ı class ¶ÔÏóÀ´»ñÈ¡ logger ¶ÔÏó");
+		log.debug("debugé€šè¿‡ class å¯¹è±¡æ¥è·å– logger å¯¹è±¡");
 		
-		log.warn("warnÍ¨¹ı class ¶ÔÏóÀ´»ñÈ¡ logger ¶ÔÏó");
+		log.warn("warné€šè¿‡ class å¯¹è±¡æ¥è·å– logger å¯¹è±¡");
 	}
 
 }

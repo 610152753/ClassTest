@@ -9,13 +9,13 @@ public class AgeReverseOrder implements Comparator<Person>
 		int result = p2.getAge() - (p1.getAge());
 		if( 0 == result)
 		{
-		  return p2.getId() - p1.getId();      //若年龄相同则按id排序
+		  return p2.getId() - p1.getId();      //鑻ュ勾榫勭浉鍚屽垯鎸塱d鎺掑簭
 		}
 		return result;
 	}
 	
 	public String getMethodName(){
-		return "按年龄逆序";
+		return "鎸夊勾榫勯�嗗簭";
 	}
 
 }

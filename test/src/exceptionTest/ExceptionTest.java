@@ -2,12 +2,12 @@ package exceptionTest;
 
 /**
  * 
- * Java中的异常分为两大类：
- * 1.Checked excption(非Runtime Exception)
+ * Java涓殑寮傚父鍒嗕负涓ゅぇ绫伙細
+ * 1.Checked excption(闈濺untime Exception)
  * 2.Unchecked excption(Runtime Exception)
  *
  *
- *异常处理的一般结构是:
+ *寮傚父澶勭悊鐨勪竴鑸粨鏋勬槸:
  *
  *Try
  *{
@@ -19,7 +19,7 @@ package exceptionTest;
  *Finally
  *{
  *}
- *无论程序是否出现异常，Finally代码块都会被执行
+ *鏃犺绋嬪簭鏄惁鍑虹幇寮傚父锛孎inally浠ｇ爜鍧楅兘浼氳鎵ц
  *
  *
  */

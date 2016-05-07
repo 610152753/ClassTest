@@ -12,11 +12,11 @@ public class NameReverseOrder implements Comparator<Person>
 	public int compare(Person p1, Person p2){
 		int result = p2.getName().compareTo(p1.getName());
 		if(0==result){
-			return p2.getId() - p1.getId();   //若姓名相同则按id排序
+			return p2.getId() - p1.getId();   //鑻ュ鍚嶇浉鍚屽垯鎸塱d鎺掑簭
 		}
 		return result;
 	}
 	public String getMethodName(){
-		return "按姓名逆序";
+		return "鎸夊鍚嶉�嗗簭";
 	}
 }

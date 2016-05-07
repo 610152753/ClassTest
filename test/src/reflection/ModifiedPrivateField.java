@@ -22,7 +22,7 @@ public class ModifiedPrivateField
 		 * 	at reflection.ModifiedPrivateField.main(ModifiedPrivateField.java:16)
 		 */
 		
-		//½ûÖ¹javaµÄ·ÃÎÊ¿ØÖÆ¼ì²é
+		//ç¦æ­¢javaçš„è®¿é—®æ§åˆ¶æ£€æŸ¥
 
 		field.setAccessible(true);
 		

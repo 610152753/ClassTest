@@ -23,7 +23,7 @@ public class SAXBuilderJdom {
 		
 		System.out.println(element.getName());
 		
-		Element student = element.getChild("Ñ§Éú");
+		Element student = element.getChild("å­¦ç”Ÿ");
 		
 		System.out.println(student.getText());
 		
@@ -36,7 +36,7 @@ public class SAXBuilderJdom {
 			System.out.println(((Attribute)a).getValue());
 		}
 		
-		student.removeChild("µØÖ·");
+		student.removeChild("åœ°å€");
 		
 		XMLOutputter out = new XMLOutputter();
 		

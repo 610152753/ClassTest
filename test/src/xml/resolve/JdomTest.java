@@ -16,30 +16,30 @@ public class JdomTest {
 		
 		 Document document = new Document();
 		 
-		 //Í¬Ê±ĞŞ¸Ä¶à¸ö±äÁ¿ Alt + shift + r
-		 Element root = new Element("Ñ§ÉúÊÖ²á");
+		 //åŒæ—¶ä¿®æ”¹å¤šä¸ªå˜é‡ Alt + shift + r
+		 Element root = new Element("å­¦ç”Ÿæ‰‹å†Œ");
 		 
 		 document.addContent(root);
 		 
-		 Attribute attr = new Attribute("°à¼¶","2");
+		 Attribute attr = new Attribute("ç­çº§","2");
 		 
-		 Element student = new Element("Ñ§Éú").setAttribute("Ñ§ºÅ", "1").setAttribute(attr);
+		 Element student = new Element("å­¦ç”Ÿ").setAttribute("å­¦å·", "1").setAttribute(attr);
 		 
-		 Comment comment = new Comment("ÕâÊÇÑ§ÉúÊÖ²áµÄXML");
+		 Comment comment = new Comment("è¿™æ˜¯å­¦ç”Ÿæ‰‹å†Œçš„XML");
 
 		 root.addContent(comment);
-		 //·½·¨Á´µÄ±à³Ì·ç¸ñ£¬ ¿ÉÒÔsetºó·µ»ØµÄÊÇ¶ÔÏó±¾Éí ¿ÉÒÔÊµÏÖ¶à´Îset
+		 //æ–¹æ³•é“¾çš„ç¼–ç¨‹é£æ ¼ï¼Œ å¯ä»¥setåè¿”å›çš„æ˜¯å¯¹è±¡æœ¬èº« å¯ä»¥å®ç°å¤šæ¬¡set
 		 
 		 root.addContent(student);
 
-		student.addContent(new Element("ĞÕÃû").setText("ÕÅÈı")).addContent(new Element("ĞÔ±ğ").setText("Å®"))
-				.addContent(new Element("µØÖ·").setText("±±¾©ÊĞº£µíÇø")).addContent(new Element("ÄêÁä").setText("20"));
+		student.addContent(new Element("å§“å").setText("å¼ ä¸‰")).addContent(new Element("æ€§åˆ«").setText("å¥³"))
+				.addContent(new Element("åœ°å€").setText("åŒ—äº¬å¸‚æµ·æ·€åŒº")).addContent(new Element("å¹´é¾„").setText("20"));
 		 
-		 //XMlÊä³ö¸ñÊ½µÄ¿ØÖÆ
+		 //XMlè¾“å‡ºæ ¼å¼çš„æ§åˆ¶
 		 Format format = Format.getPrettyFormat();
 		 
 		 format.setEncoding("gbk");
-		 //ÊäÈëµ½ÎÄ¼ş
+		 //è¾“å…¥åˆ°æ–‡ä»¶
 		 XMLOutputter out = new XMLOutputter();
 		 
 		 out.setFormat(format);

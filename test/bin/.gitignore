@@ -17,7 +17,6 @@
 /interviewTest/
 /ioTest/
 /junitTest/
-/log4j.properties
 /log4jTest/
 /map/
 /netWork/
@@ -28,6 +27,7 @@
 /recursionTest/
 /reflection/
 /singleTest/
+/strategy/
 /strategyTestPerson/
 /swingTest/
 /threadTest/

@@ -11,7 +11,7 @@ public class BufferedOutputStreamTest {
 		OutputStream os = new FileOutputStream("1.txt");
 		
 		
-		//»º³åÊä³öÁ÷
+		//ç¼“å†²è¾“å‡ºæµ
 		BufferedOutputStream bos = new BufferedOutputStream(os);
 		
 		bos.write("http://www.google.com".getBytes());

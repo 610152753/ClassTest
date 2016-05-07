@@ -2,7 +2,7 @@ package singleTest;
 
 public class Bank1
 {
-	//¶öººÊ½
+	//é¥¿æ±‰å¼
 	private Bank1(){}
 	
 	private static Bank1  bank = new Bank1();

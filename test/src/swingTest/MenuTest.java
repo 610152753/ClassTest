@@ -9,14 +9,14 @@ import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 /**
  * 
- * ´´½¨²Ëµ¥£º
- * ²½Öè£º
- * 1.´´½¨Ò»¸ö MenuBar ¶ÔÏó, ½«Æä¼ÓÈëÒ»¸ö²Ëµ¥ÈİÆ÷£¬
- * ÀıÈç£º Frame .
- * 2.´´½¨ Ò»¸ö»ò¶à¸öMenu ¶ÔÏó,½«Æä¼ÓÈëmenu bar 
- * ¶ÔÏó.
- * 3.´´½¨ Ò»¸ö»ò¶à¸öMenuItem objects,¶ÔÏó,½«Æä¼Ó
- * ÈëÏàÓ¦µÄmenu object.
+ * åˆ›å»ºèœå•ï¼š
+ * æ­¥éª¤ï¼š
+ * 1.åˆ›å»ºä¸€ä¸ª MenuBar å¯¹è±¡, å°†å…¶åŠ å…¥ä¸€ä¸ªèœå•å®¹å™¨ï¼Œ
+ * ä¾‹å¦‚ï¼š Frame .
+ * 2.åˆ›å»º ä¸€ä¸ªæˆ–å¤šä¸ªMenu å¯¹è±¡,å°†å…¶åŠ å…¥menu bar 
+ * å¯¹è±¡.
+ * 3.åˆ›å»º ä¸€ä¸ªæˆ–å¤šä¸ªMenuItem objects,å¯¹è±¡,å°†å…¶åŠ 
+ * å…¥ç›¸åº”çš„menu object.
  *
  */
 public class MenuTest

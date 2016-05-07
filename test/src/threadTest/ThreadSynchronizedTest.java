@@ -2,14 +2,14 @@ package threadTest;
 
 
 /**
- * ÖØµãÀí½â¡ï
+ * é‡ç‚¹ç†è§£â˜…
  * 
- * javaÖÐµÄÃ¿¸ö¶ÔÏó¶¼ÓÐÒ»¸öËø(lock)»òÕß½Ð×ö¼àÊÓÆ÷(monitor),µ±·ÃÎÊÄ³¸ö¶ÔÏóµÄsynchronized·½·¨Ê±
- * £¬±íÊ¾½«¡°¸ÃÀàµÄ¶ÔÏóÉÏËø¡±,´ËÊ±ÆäËûÈÎºÎÏß³Ì¶¼ÎÞ·¨ÔÙÈ¥·ÃÎÊ¸Ãsynchronized·½·¨ÁË£¬Ö±µ½Ö®Ç°µÄÄÇ¸öÏß³ÌÖ´ÐÐÍê±Ïºó
- * (»òÕßÊÇÒì³£Å×³öÁË)£¬ÄÇÃ´½«¸Ã¶ÔÏóµÄËøÊÍ·Åµô£¬ÆäËûÏß³Ì²ÅÓÐ¿ÉÄÜÔÙÈ¥·ÃÎÊ¸Ãsynchronized·½·¨¡£
+ * javaä¸­çš„æ¯ä¸ªå¯¹è±¡éƒ½æœ‰ä¸€ä¸ªé”(lock)æˆ–è€…å«åšç›‘è§†å™¨(monitor),å½“è®¿é—®æŸä¸ªå¯¹è±¡çš„synchronizedæ–¹æ³•æ—¶
+ * ï¼Œè¡¨ç¤ºå°†â€œè¯¥ç±»çš„å¯¹è±¡ä¸Šé”â€,æ­¤æ—¶å…¶ä»–ä»»ä½•çº¿ç¨‹éƒ½æ— æ³•å†åŽ»è®¿é—®è¯¥synchronizedæ–¹æ³•äº†ï¼Œç›´åˆ°ä¹‹å‰çš„é‚£ä¸ªçº¿ç¨‹æ‰§è¡Œå®Œæ¯•åŽ
+ * (æˆ–è€…æ˜¯å¼‚å¸¸æŠ›å‡ºäº†)ï¼Œé‚£ä¹ˆå°†è¯¥å¯¹è±¡çš„é”é‡Šæ”¾æŽ‰ï¼Œå…¶ä»–çº¿ç¨‹æ‰æœ‰å¯èƒ½å†åŽ»è®¿é—®è¯¥synchronizedæ–¹æ³•ã€‚
  * 
- * Èç¹ûÒ»¸ö¶ÔÏóÓÐ¶à¸ösynchronized·½·¨£¬Ä³Ò»Ê±¿ÌÄ³¸öÏß³ÌÒÑ¾­½øÈëµ½ÁËÄ³¸ösynchronized·½·¨£¬ÄÇÃ´ÏÖÔÚ
- * ÔÚÃ»ÓÐÖ´ÐÐÍê±ÏÇ°£¬ÆäËûÏß³ÌÊÇÎÞ·¨·ÃÎÊ¸Ã¶ÔÏóµÄÈÎºÎsynchronized·½·¨µÄ¡£
+ * å¦‚æžœä¸€ä¸ªå¯¹è±¡æœ‰å¤šä¸ªsynchronizedæ–¹æ³•ï¼ŒæŸä¸€æ—¶åˆ»æŸä¸ªçº¿ç¨‹å·²ç»è¿›å…¥åˆ°äº†æŸä¸ªsynchronizedæ–¹æ³•ï¼Œé‚£ä¹ˆçŽ°åœ¨
+ * åœ¨æ²¡æœ‰æ‰§è¡Œå®Œæ¯•å‰ï¼Œå…¶ä»–çº¿ç¨‹æ˜¯æ— æ³•è®¿é—®è¯¥å¯¹è±¡çš„ä»»ä½•synchronizedæ–¹æ³•çš„ã€‚
  * 
  * @author Joe
  *
@@ -23,7 +23,7 @@ public class ThreadSynchronizedTest
 		
 		ThreadSynchronized1 ts = new ThreadSynchronized1(ex1);
 		
-		ex1 = new Example();  //´´½¨Ò»¸öÐÂµÄ¶ÔÏó
+		ex1 = new Example();  //åˆ›å»ºä¸€ä¸ªæ–°çš„å¯¹è±¡
 		
 		ThreadSynchronized2 ts1 = new ThreadSynchronized2(ex1);
 		
@@ -36,14 +36,14 @@ public class ThreadSynchronizedTest
 
 /**
  * 
- * synchronizedÊÇ¶ÔÀàµÄµ±Ç°ÊµÀý½øÐÐ¼ÓËø£¬·ÀÖ¹ÆäËûÏß³ÌÍ¬Ê±·ÃÎÊ¸ÃÀàµÄ¸ÃÊµÀýµÄËùÓÐsynchronized¿é£¬
- * ×¢ÒâÕâÀïÊÇ¡°ÀàµÄµ±Ç°ÊµÀý¡±£¬ ÀàµÄÁ½¸ö²»Í¬ÊµÀý¾ÍÃ»ÓÐÕâÖÖÔ¼ÊøÁË¡£ÄÇÃ´static synchronized
- * Ç¡ºÃ¾ÍÊÇÒª¿ØÖÆÀàµÄËùÓÐÊµÀýµÄ·ÃÎÊÁË£¬static synchronizedÊÇÏÞÖÆÏß³ÌÍ¬Ê±·ÃÎÊjvmÖÐ¸ÃÀàµÄËùÓÐÊµÀýÍ¬Ê±·ÃÎÊ¶ÔÓ¦µÄ´úÂë¿ì¡£
- * Êµ¼ÊÉÏ£¬ÔÚÀàÖÐÄ³·½·¨»òÄ³´úÂë¿éÖÐÓÐ synchronized£¬ÄÇÃ´ÔÚÉú³ÉÒ»¸ö¸ÃÀàÊµÀýºó£¬
- * ¸ÄÀàÒ²¾ÍÓÐÒ»¸ö¼àÊÓ¿ì£¬·ÅÖÃÏß³Ì²¢·¢·ÃÎÊ¸ÄÊµÀýsynchronized±£»¤¿ì£¬
- * ¶østatic synchronizedÔòÊÇËùÓÐ¸ÃÀàµÄÊµÀý¹«ÓÃÒ»¸ö¼àÊÓ¿éÁË£¬(¼´¸ø¸ÃÀàµÄclass¶ÔÏóÉÏËø)
- * Ò²¾ÍÊÇÁ½¸öµÄÇø±ðÁË,Ò²¾ÍÊÇsynchronizedÏàµ±ÓÚ this.synchronized£¬¶ø
- * static synchronizedÏàµ±ÓÚSomething.synchronized.
+ * synchronizedæ˜¯å¯¹ç±»çš„å½“å‰å®žä¾‹è¿›è¡ŒåŠ é”ï¼Œé˜²æ­¢å…¶ä»–çº¿ç¨‹åŒæ—¶è®¿é—®è¯¥ç±»çš„è¯¥å®žä¾‹çš„æ‰€æœ‰synchronizedå—ï¼Œ
+ * æ³¨æ„è¿™é‡Œæ˜¯â€œç±»çš„å½“å‰å®žä¾‹â€ï¼Œ ç±»çš„ä¸¤ä¸ªä¸åŒå®žä¾‹å°±æ²¡æœ‰è¿™ç§çº¦æŸäº†ã€‚é‚£ä¹ˆstatic synchronized
+ * æ°å¥½å°±æ˜¯è¦æŽ§åˆ¶ç±»çš„æ‰€æœ‰å®žä¾‹çš„è®¿é—®äº†ï¼Œstatic synchronizedæ˜¯é™åˆ¶çº¿ç¨‹åŒæ—¶è®¿é—®jvmä¸­è¯¥ç±»çš„æ‰€æœ‰å®žä¾‹åŒæ—¶è®¿é—®å¯¹åº”çš„ä»£ç å¿«ã€‚
+ * å®žé™…ä¸Šï¼Œåœ¨ç±»ä¸­æŸæ–¹æ³•æˆ–æŸä»£ç å—ä¸­æœ‰ synchronizedï¼Œé‚£ä¹ˆåœ¨ç”Ÿæˆä¸€ä¸ªè¯¥ç±»å®žä¾‹åŽï¼Œ
+ * æ”¹ç±»ä¹Ÿå°±æœ‰ä¸€ä¸ªç›‘è§†å¿«ï¼Œæ”¾ç½®çº¿ç¨‹å¹¶å‘è®¿é—®æ”¹å®žä¾‹synchronizedä¿æŠ¤å¿«ï¼Œ
+ * è€Œstatic synchronizedåˆ™æ˜¯æ‰€æœ‰è¯¥ç±»çš„å®žä¾‹å…¬ç”¨ä¸€ä¸ªç›‘è§†å—äº†ï¼Œ(å³ç»™è¯¥ç±»çš„classå¯¹è±¡ä¸Šé”)
+ * ä¹Ÿå°±æ˜¯ä¸¤ä¸ªçš„åŒºåˆ«äº†,ä¹Ÿå°±æ˜¯synchronizedç›¸å½“äºŽ this.synchronizedï¼Œè€Œ
+ * static synchronizedç›¸å½“äºŽSomething.synchronized.
  * 
  * @author Joe
  *

@@ -9,11 +9,11 @@ import java.io.Serializable;
 
 /**
  * 
- * 1.һ�������뱻���л�������Ҫʵ��java.io.Serializable�ӿڣ� �ýӿ���û�ж����κη�������һ����ʶ�Խӿ�(Marker
- * Interface), ��һ����ʵ���˸ýӿڣ��ͱ�ʾ�����Ķ����ǿ������л��ġ�
+ * 1.一个类若想被序列化，则需要实现java.io.Serializable接口， 该接口中没有定义任何方法，是一个标识性接口(Marker
+ * Interface), 当一个类实现了该接口，就表示这个类的对象是可以序列化的。
  * 
- * 2.�����л�ʱ��static�������޷����л��ģ����A�����˶�B�����ã� ��ô�����л�A��ʱ��Ҳ�ὫBһ�������л��������ʱA�������л�,B�޷����л�,
- * ��ô�����л�A��ʱ��ͻᷢ���쳣.��ʱ����Ҫ����B��������Ϊtransient, �ùؼ��ֱ�ʾ�������ᱻ���л�.
+ * 2.在序列化时，static变量是无法序列化的；如果A包含了对B的引用， 那么在序列化A的时候也会将B一并地序列化；如果此时A可以序列化,B无法序列化,
+ * 那么当序列化A的时候就会发生异常.这时候需要将对B的引用设为transient, 该关键字表示变量不会被序列化.
  * 
  * @author Joe
  *
@@ -100,8 +100,8 @@ class Person2 implements Serializable {
 
 	/**
 	 * 
-	 * ��������һ�������л�/�����л�������ʵ������������private����(��������Ҫ������ı�����ȫ��һ��)
-	 * ��ô���������ǿ��Ը��ӵײ㡢����ϸ���ķ�ʽ�������л�/�����л����̡�
+	 * 当我们在一个待序列化/反序列化的类中实现了下面两个private方法(方法声明要与下面的保持完全的一致)
+	 * 那么就允许我们可以更加底层、更加细粒的方式控制序列化/反序列化过程。
 	 * 
 	 */
 	private void writeObject(java.io.ObjectOutputStream out) throws IOException {

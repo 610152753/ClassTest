@@ -9,13 +9,13 @@ public class AgeOrder implements Comparator<Person>
 		int result = p1.getAge() - (p2.getAge());
 		if( 0 == result)
 		{
-		  return p1.getId() - p2.getId();      //ÈôÄêÁäÏàÍ¬Ôò°´idÅÅĞò
+		  return p1.getId() - p2.getId();      //è‹¥å¹´é¾„ç›¸åŒåˆ™æŒ‰idæ’åº
 		}
 		return result;
 	}
 	
 	public String getMethodName(){
-		return "°´ÄêÁäÕıĞò";
+		return "æŒ‰å¹´é¾„æ­£åº";
 	}
 
 }

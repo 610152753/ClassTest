@@ -29,7 +29,7 @@ public class ClientInputThread extends Thread
 				
 				String str =  buffer.readLine();
 				
-				System.out.println("received msg from server£º" + str);
+				System.out.println("received msg from serverï¼š" + str);
 				
 			}
 

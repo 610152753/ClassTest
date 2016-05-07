@@ -38,7 +38,7 @@ public class ArrayTestReflection1
 	   
 		/**
 		 * 
-		 * Integer.TYPE返回的是int，而Integer.Class返回的是Integer类所 对应的Class对象
+		 * Integer.TYPE杩斿洖鐨勬槸int锛岃�孖nteger.Class杩斿洖鐨勬槸Integer绫绘墍 瀵瑰簲鐨凜lass瀵硅薄
 		 * int 
 		 * class java.lang.Integer
 		 */

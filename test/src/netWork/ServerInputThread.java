@@ -28,11 +28,11 @@ public class ServerInputThread extends Thread
 				System.out.println("ServerInputThread 1");
 				BufferedReader buff = new BufferedReader(new InputStreamReader(is));
 				System.out.println("ServerInputThread 2");
-				//Èç¹û¶ÁÈ¡µÄÄÚÈİÃ»ÓĞµÄ»°£¬³ÌĞòÒ»Ö±ÔÚreadLine´¦µÈ´ı
+				//å¦‚æœè¯»å–çš„å†…å®¹æ²¡æœ‰çš„è¯ï¼Œç¨‹åºä¸€ç›´åœ¨readLineå¤„ç­‰å¾…
 				String str =  buff.readLine();
 				System.out.println("ServerInputThread 3");
 				
-				System.out.println("received msg From Client£º" + str);
+				System.out.println("received msg From Clientï¼š" + str);
 			}
 			
 		} catch (IOException e) {

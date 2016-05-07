@@ -5,7 +5,7 @@ import java.util.Properties;
 import java.util.Set;
 
 /**
- * 获取系统环境变量
+ * 鑾峰彇绯荤粺鐜鍙橀噺
  * 
  * @author JoePotter
  *

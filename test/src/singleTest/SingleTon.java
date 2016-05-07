@@ -1,9 +1,9 @@
 package singleTest;
 
 /**
- * ���ڵ���ģʽ��Singleton����˵�������getInstance()����������Singletonʵ������ܻ����ͬ�����⣬�����ܻ�����������ͬ�Ķ���
+ * 对于单例模式（Singleton）来说，如果在getInstance()方法中生成Singleton实例则可能会产生同步问题，即可能会生成两个不同的对象。
  * 
- * ���̵߳�ʱ��,��if�жϵĵط����ܳ��ֶ�δ�������
+ * 多线程的时候,在if判断的地方可能出现多次创建对象
  * 
  * @author Joe
  *

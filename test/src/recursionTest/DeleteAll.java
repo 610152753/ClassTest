@@ -32,7 +32,7 @@ public class DeleteAll {
 	public void delAll1(File file)
  {
 		
-		//确定出口
+		//纭畾鍑哄彛
 		if (file.isFile() || (file.list().length == 0)) {
 			file.delete();
 		} else {
@@ -44,7 +44,7 @@ public class DeleteAll {
 				delAll1(f);
 			}
 			
-			//最后删除自己文件夹，最后的处理
+			//鏈�鍚庡垹闄よ嚜宸辨枃浠跺す锛屾渶鍚庣殑澶勭悊
 			System.out.println(file.delete());
 		}
 

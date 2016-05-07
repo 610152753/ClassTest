@@ -9,12 +9,12 @@ import java.util.Vector;
 /**
  * 
  * 
- * ¶¯Ì¬´úÀí²½Öè
- *1.´´½¨Ò»¸öÊµÏÖ½Ó¿ÚInvocationHandlerµÄÀà£¬Ëü±ØĞëÊµÏÖinvoke·½·¨
- *2.´´½¨±»´úÀíµÄÀàÒÔ¼°½Ó¿Ú
- *3.Í¨¹ıProxyµÄ¾²Ì¬·½·¨ newProxyInstance(ClassLoader loader,
- * Class[] interfaces,InvocationHandler h)´´½¨Ò»¸ö´úÀí
- *4.Í¨¹ı´úÀíµ÷ÓÃ·½·¨
+ * åŠ¨æ€ä»£ç†æ­¥éª¤
+ *1.åˆ›å»ºä¸€ä¸ªå®ç°æ¥å£InvocationHandlerçš„ç±»ï¼Œå®ƒå¿…é¡»å®ç°invokeæ–¹æ³•
+ *2.åˆ›å»ºè¢«ä»£ç†çš„ç±»ä»¥åŠæ¥å£
+ *3.é€šè¿‡Proxyçš„é™æ€æ–¹æ³• newProxyInstance(ClassLoader loader,
+ * Class[] interfaces,InvocationHandler h)åˆ›å»ºä¸€ä¸ªä»£ç†
+ *4.é€šè¿‡ä»£ç†è°ƒç”¨æ–¹æ³•
  *
  *
  */

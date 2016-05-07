@@ -66,7 +66,7 @@ public class DocumentBuilderFactoryTest1 {
 		
 		System.out.println("=====================");
 		
-		NodeList nodelist = document.getElementsByTagName("Ñ§Éú");
+		NodeList nodelist = document.getElementsByTagName("å­¦ç”Ÿ");
 		
 		for(int i = 0; i <nodelist.getLength(); i++)
 		{

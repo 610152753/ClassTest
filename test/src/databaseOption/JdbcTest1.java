@@ -12,7 +12,7 @@ public class JdbcTest1
 	{
 		String url = "jdbc:oracle:thin:@192.168.1.105:1521:timran11g"; // HOST:192.168.1.105;PORT:1521;SID_NAME:timran11g
 		
-		String strSql = "SELECT * FROM t1"; // ½«sqlÖĞ½«;È¥µô
+		String strSql = "SELECT * FROM t1"; // å°†sqlä¸­å°†;å»æ‰
 		
 		String strSql1 = "SELECT * FROM MYTEST";
 		
@@ -28,15 +28,15 @@ public class JdbcTest1
 		
 		try
 		{
-			Class.forName("oracle.jdbc.driver.OracleDriver"); // ½¨±íºóÏÈcommit²ÅÄÜÔÚÆäËü¶ËÖĞµ÷ÓÃ
+			Class.forName("oracle.jdbc.driver.OracleDriver"); // å»ºè¡¨åå…ˆcommitæ‰èƒ½åœ¨å…¶å®ƒç«¯ä¸­è°ƒç”¨
 
 			Connection conn = DriverManager.getConnection(url, "scott", "scott");
 
 			Statement stmt = conn.createStatement();
 			
-			stmt.execute("insert into t1 (id) values(3)"); // ±íÒÑ½¨Á¢£¬²åÈë¼ÇÂ¼
+			stmt.execute("insert into t1 (id) values(3)"); // è¡¨å·²å»ºç«‹ï¼Œæ’å…¥è®°å½•
 
-			ResultSet rs = stmt.executeQuery(strSql); // ²éÑ¯Óï¾äµÄÊ¹ÓÃ
+			ResultSet rs = stmt.executeQuery(strSql); // æŸ¥è¯¢è¯­å¥çš„ä½¿ç”¨
 			while (rs.next())
 			{
 				System.out.println("ID:" + rs.getString(1));
@@ -50,7 +50,7 @@ public class JdbcTest1
 			
 			stmt.executeUpdate(sql2); //DELETE TABLE DATA
 
-			ResultSet rs1 = stmt.executeQuery(strSql1); // ²éÑ¯Óï¾äµÄÊ¹ÓÃ
+			ResultSet rs1 = stmt.executeQuery(strSql1); // æŸ¥è¯¢è¯­å¥çš„ä½¿ç”¨
 			
 			while (rs1.next())
 			{

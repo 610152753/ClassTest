@@ -14,7 +14,7 @@ public class TalkServerThread {
 		
 		Socket socket = serverSocket.accept();
 		
-		//Æô¶¯¶ÁĞ´Ïß³Ì
+		//å¯åŠ¨è¯»å†™çº¿ç¨‹
 		
 		
 		new ServerInputThread(socket).start();

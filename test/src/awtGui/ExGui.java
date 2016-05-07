@@ -1,7 +1,6 @@
 package awtGui;
 
 import java.awt.Button;
-import java.awt.FlowLayout;
 import java.awt.Frame;
 
 public class ExGui

@@ -3,11 +3,11 @@ package exceptionTest;
 
 /**
  * 
- *ÎÒÃÇ¿ÉÒÔÊ¹ÓÃ¶à¸öcatch¿éÀ´²¶»ñÒì³££¬ÕâÊ±ĞèÒª½«¸¸ÀàĞÍµÄcatch¿é·Åµ½×ÓÀàĞÍµÄcatch¿éÖ®ºó£¬
- *ÕâÑù²ÅÄÜ±£Ö¤ºóĞøµÄcatch¿é¿ÉÄÜ±»Ö´ĞĞ£¬·ñÔò×ÓÀàĞÍµÄcatch½«ÓÀÔ¶ÎŞ·¨µ½´ï£¬java±àÒëÆ÷»á±¨
- *±àÒë´íÎó¡£
+ *æˆ‘ä»¬å¯ä»¥ä½¿ç”¨å¤šä¸ªcatchå—æ¥æ•è·å¼‚å¸¸ï¼Œè¿™æ—¶éœ€è¦å°†çˆ¶ç±»å‹çš„catchå—æ”¾åˆ°å­ç±»å‹çš„catchå—ä¹‹åï¼Œ
+ *è¿™æ ·æ‰èƒ½ä¿è¯åç»­çš„catchå—å¯èƒ½è¢«æ‰§è¡Œï¼Œå¦åˆ™å­ç±»å‹çš„catchå°†æ°¸è¿œæ— æ³•åˆ°è¾¾ï¼Œjavaç¼–è¯‘å™¨ä¼šæŠ¥
+ *ç¼–è¯‘é”™è¯¯ã€‚
  *
- *Èç¹û¶à¸öcatch¿éµÄÒì³£ÀàĞÍÊÇ¶ÀÁ¢µÄ(MyException,MyException1),ÄÇÃ´Ë­Ç°Ë­ºó¶¼¿ÉÒÔµÄ
+ *å¦‚æœå¤šä¸ªcatchå—çš„å¼‚å¸¸ç±»å‹æ˜¯ç‹¬ç«‹çš„(MyException,MyException1),é‚£ä¹ˆè°å‰è°åéƒ½å¯ä»¥çš„
  * 
  */
 public class Exception3
@@ -16,11 +16,11 @@ public class Exception3
 	{
 		if(null == str)
 		{
-			throw new MyException("´«ÈëµÄ×Ö·û´®²ÎÊı²»ÄÜÎªnull");
+			throw new MyException("ä¼ å…¥çš„å­—ç¬¦ä¸²å‚æ•°ä¸èƒ½ä¸ºnull");
 		}
 		else if("hello".equals(str))
 		{
-			throw new MyException1("ÊäÈëµÄÄÚÈİÊÇ:hello !");
+			throw new MyException1("è¾“å…¥çš„å†…å®¹æ˜¯:hello !");
 		}else
 		{
 			System.out.println(str);
@@ -37,28 +37,28 @@ public class Exception3
 		}
 		catch(MyException e)
 		{
-			System.out.println("½øÈëÊäÈëÊÇnullµÄÒì³££¡before");
+			System.out.println("è¿›å…¥è¾“å…¥æ˜¯nullçš„å¼‚å¸¸ï¼before");
 			e.printStackTrace();
-			System.out.println("½øÈëÊäÈëÊÇnullµÄÒì³££¡after ");
+			System.out.println("è¿›å…¥è¾“å…¥æ˜¯nullçš„å¼‚å¸¸ï¼after ");
 		}
 //		catch(MyException1 e)
 //		{
-//			System.out.println("½øÈëÊäÈëµÄÊÇhelloµÄÒì³££¡before");
+//			System.out.println("è¿›å…¥è¾“å…¥çš„æ˜¯helloçš„å¼‚å¸¸ï¼before");
 //			e.printStackTrace();
-//			System.out.println("½øÈëÊäÈëµÄÊÇhelloµÄÒì³££¡after");
+//			System.out.println("è¿›å…¥è¾“å…¥çš„æ˜¯helloçš„å¼‚å¸¸ï¼after");
 //		}
 		catch(Exception e)
 		{
-			System.out.println("½øÈëÁËException £¡before");
+			System.out.println("è¿›å…¥äº†Exception ï¼before");
 			e.printStackTrace();
-			System.out.println("½øÈëÁËException £¡before");
+			System.out.println("è¿›å…¥äº†Exception ï¼before");
 		}
 		finally
 		{
-			System.out.println("³ÌĞò¼´½«´¦ÀíÍê±Ï......");
+			System.out.println("ç¨‹åºå³å°†å¤„ç†å®Œæ¯•......");
 		}
 		
-		System.out.println("³ÌĞò´¦ÀíÍê±Ï£¡");
+		System.out.println("ç¨‹åºå¤„ç†å®Œæ¯•ï¼");
 		
 	
 	}

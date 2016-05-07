@@ -2,20 +2,20 @@ package exceptionTest;
 
 
 /**
- * ¶ÔÓÚ·ÇÔËÐÐÊ±Òì³£(checked exception),±ØÐëÒª¶ÔÆä½øÐÐ´¦Àí£¬´¦Àí·½Ê½ÓÐÁ½ÖÖ:
- * 1.ÔÚµ÷ÓÃÖÐ²úÉúÒì³£µÄ·½·¨ËùÔÚµÄ·½·¨ÉÏÉùÃ÷throws Exception 
- * 2.Ê¹ÓÃtry{}catch(Exception e){}finally ½øÐÐ²¶»ñ
+ * å¯¹äºŽéžè¿è¡Œæ—¶å¼‚å¸¸(checked exception),å¿…é¡»è¦å¯¹å…¶è¿›è¡Œå¤„ç†ï¼Œå¤„ç†æ–¹å¼æœ‰ä¸¤ç§:
+ * 1.åœ¨è°ƒç”¨ä¸­äº§ç”Ÿå¼‚å¸¸çš„æ–¹æ³•æ‰€åœ¨çš„æ–¹æ³•ä¸Šå£°æ˜Žthrows Exception 
+ * 2.ä½¿ç”¨try{}catch(Exception e){}finally è¿›è¡Œæ•èŽ·
  *
  * 
- * ¶ÔÓÚÔËÐÐÊ±Òì³£(runtime exception)£¬ÎÒÃÇ¿ÉÒÔ²»¶ÔÆä½øÐÐ´¦Àí£¬Ò²¿ÉÒÔ¶ÔÆä½øÐÐ´¦Àí¡£
- * ÍÆ¼ö²»¶ÔÆä½øÐÐ´¦Àí
+ * å¯¹äºŽè¿è¡Œæ—¶å¼‚å¸¸(runtime exception)ï¼Œæˆ‘ä»¬å¯ä»¥ä¸å¯¹å…¶è¿›è¡Œå¤„ç†ï¼Œä¹Ÿå¯ä»¥å¯¹å…¶è¿›è¡Œå¤„ç†ã€‚
+ * æŽ¨èä¸å¯¹å…¶è¿›è¡Œå¤„ç†
  *
  */
 public class ExceptionTest1
 {
 	public void method() throws Exception
 	{
-		System.out.println("From ExceptionTest1 method £¡");
+		System.out.println("From ExceptionTest1 method ï¼");
 		
 		throw new Exception();
 	}

@@ -20,18 +20,18 @@ public class Client
         personList.add(new Person(4, "liujiu", 26));
  
         /*
-         * ¿ÉÍ¨¹ıÕâÀïnew²»Í¬µÄComparatorµÄÊµÏÖ´Ó¶øÊµÏÖ²»Í¬µÄÅÅĞò²ßÂÔ
-         * ·Ö±ğÓĞ
-         *  IdOrder£º°´IdÕıĞò
-         *  IdReverseOrder£º°´IdÄæĞò
-         * NameOrder£º°´ĞÕÃûÕıĞò
-         * NameReverseOrder£º°´ĞÕÃûÄæĞò
-         * AgeOrder£º°´ÄêÁäÕıĞò
-         * AgeReverseOrder£º°´ÄêÁäÄæĞò
+         * å¯é€šè¿‡è¿™é‡Œnewä¸åŒçš„Comparatorçš„å®ç°ä»è€Œå®ç°ä¸åŒçš„æ’åºç­–ç•¥
+         * åˆ†åˆ«æœ‰
+         *  IdOrderï¼šæŒ‰Idæ­£åº
+         *  IdReverseOrderï¼šæŒ‰Idé€†åº
+         * NameOrderï¼šæŒ‰å§“åæ­£åº
+         * NameReverseOrderï¼šæŒ‰å§“åé€†åº
+         * AgeOrderï¼šæŒ‰å¹´é¾„æ­£åº
+         * AgeReverseOrderï¼šæŒ‰å¹´é¾„é€†åº
          */
         Comparator<Person> comp = new AgeOrder();
         Collections.sort(personList, comp);
-        System.out.println(((AgeOrder)comp).getMethodName()+"  ÅÅĞòºóµÄĞòÁĞÊÇ:");
+        System.out.println(((AgeOrder)comp).getMethodName()+"  æ’åºåçš„åºåˆ—æ˜¯:");
         System.out.println("-----------------------");
         for (Iterator<Person> itor=personList.iterator();itor.hasNext();) {
             Person p=itor.next();

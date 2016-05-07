@@ -1,7 +1,7 @@
 package decorator_Wrapper;
 
 /**
- * ¾ßÌå×°ÊÎ½ÇÉ«£¨Concrete Decorator£©£º¸ºÔğ¸ø¹¹¼ş¶ÔÏó¡°ÌùÉÏ¡±¸½¼ÓµÄÔğÈÎ¡£
+ * å…·ä½“è£…é¥°è§’è‰²ï¼ˆConcrete Decoratorï¼‰ï¼šè´Ÿè´£ç»™æ„ä»¶å¯¹è±¡â€œè´´ä¸Šâ€é™„åŠ çš„è´£ä»»ã€‚
  * 
  * @author Joe
  *
@@ -23,7 +23,7 @@ public class ConcreteDecorator1 extends Decorator
 	
 	private void anothing()
 	{
-		System.out.println("¹¦ÄÜC");
+		System.out.println("åŠŸèƒ½C");
 	}
 
 }

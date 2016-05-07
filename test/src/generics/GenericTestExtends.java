@@ -21,16 +21,16 @@ public class GenericTestExtends<T>
 	
 	public static void main(String[] args)
 	{
-//		Ö»ÄÜÔÚListÏÂÃæµÄÀàĞÍ
+//		åªèƒ½åœ¨Listä¸‹é¢çš„ç±»å‹
 		GenericTestExtends<? extends List> ge = null;
 		
-		//ÒıÓÃÖ¸Ïò²»Í¬Àà
+		//å¼•ç”¨æŒ‡å‘ä¸åŒç±»
 		ge = new GenericTestExtends<ArrayList>();
 		ge = new GenericTestExtends<LinkedList>();
 		
 //		ge = new GenericTestExtends<HashMap>();
 		
-//		Ö»ÄÜÔÚListÉÏÃæµÄÀàĞÍ
+//		åªèƒ½åœ¨Listä¸Šé¢çš„ç±»å‹
 		GenericTestExtends<? super List> ge2 = null;
 		
 //		ge2 = new GenericTestExtends<ArrayList>();
@@ -40,7 +40,7 @@ public class GenericTestExtends<T>
 		
 		ge3.setFoo("hello world !");
 		
-//		GenericTestExtends<? extends Object> ge4 = ge3;  //ºÍÒ»¾äÏÂÃæÒ»Ñù
+//		GenericTestExtends<? extends Object> ge4 = ge3;  //å’Œä¸€å¥ä¸‹é¢ä¸€æ ·
 		GenericTestExtends<?> ge4 = ge3;
 		
 		System.out.println(ge4.getFoo());
@@ -50,11 +50,11 @@ public class GenericTestExtends<T>
 		System.out.println(ge4.getFoo());
 		
 		/**
-		 * Ê¹ÓÃ<£¿>»òÕß<? extends SomeClass>µÄÉùÃ÷·½Ê½£¬ÒâÎ¶×ÅÄúÖ»ÄÜ
-		 * Í¨¹ı¸ÃÃû³ÆÀ´È¡µÃËù²Î¿¼ÊµÀıµÄĞÅÏ¢£¬»òÕßÊÇÒÆ³ıÄ³Ğ©ĞÅÏ¢£¬µ«²»ÄÜÔö¼ÓËüµÄ
-		 * ĞÅÏ¢£¬ÒòÎªÖ»ÖªµÀµ±ÖĞ·ÅÖÃµÄÊÇSomeClassµÄ×ÓÀà£¬µ«²»Ò»¶¨ÊÇÊ²Ã´ÀàµÄÊµÀı
-		 * £¬±àÒëÆ÷²»ÈÃÄú¼ÓÈëĞÅÏ¢£¬ÀíÓÉÊÇ£¬Èç¹û¿ÉÒÔ¼ÓÈëĞÅÏ¢µÄ»°£¬ÄÇÃ´Äú¾ÉµÄ¼ÇµÃÈ¡»ØµÄ
-		 * ÊµÀıÊÇÊ²Ã´ÀàĞÍ£¬ÈÃºó×ª»»ÎªÔ­À´µÄÀàĞÍ·½¿É½øĞĞ²Ù×÷£¬Õâ¾ÍÊ§È¥ÁËÊ¹ÓÃ·ºĞÍµÄÒâÒå¡£
+		 * ä½¿ç”¨<ï¼Ÿ>æˆ–è€…<? extends SomeClass>çš„å£°æ˜æ–¹å¼ï¼Œæ„å‘³ç€æ‚¨åªèƒ½
+		 * é€šè¿‡è¯¥åç§°æ¥å–å¾—æ‰€å‚è€ƒå®ä¾‹çš„ä¿¡æ¯ï¼Œæˆ–è€…æ˜¯ç§»é™¤æŸäº›ä¿¡æ¯ï¼Œä½†ä¸èƒ½å¢åŠ å®ƒçš„
+		 * ä¿¡æ¯ï¼Œå› ä¸ºåªçŸ¥é“å½“ä¸­æ”¾ç½®çš„æ˜¯SomeClassçš„å­ç±»ï¼Œä½†ä¸ä¸€å®šæ˜¯ä»€ä¹ˆç±»çš„å®ä¾‹
+		 * ï¼Œç¼–è¯‘å™¨ä¸è®©æ‚¨åŠ å…¥ä¿¡æ¯ï¼Œç†ç”±æ˜¯ï¼Œå¦‚æœå¯ä»¥åŠ å…¥ä¿¡æ¯çš„è¯ï¼Œé‚£ä¹ˆæ‚¨æ—§çš„è®°å¾—å–å›çš„
+		 * å®ä¾‹æ˜¯ä»€ä¹ˆç±»å‹ï¼Œè®©åè½¬æ¢ä¸ºåŸæ¥çš„ç±»å‹æ–¹å¯è¿›è¡Œæ“ä½œï¼Œè¿™å°±å¤±å»äº†ä½¿ç”¨æ³›å‹çš„æ„ä¹‰ã€‚
 		 */
 //		ge4.setFoo("welcome!");
 		

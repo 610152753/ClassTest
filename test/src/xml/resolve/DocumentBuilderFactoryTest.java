@@ -17,31 +17,31 @@ public class DocumentBuilderFactoryTest {
 	
 	public static void main(String[] args) throws ParserConfigurationException, SAXException, IOException
 	{
-		//Step 1:»ñµÃdom½âÎöÆ÷¹¤³§(¹¤×÷µÄ×÷ÓÃÊÇÓÃÓÚ´´½¨¾ßÌåµÄ½âÎöÆ÷)
+		//Step 1:è·å¾—domè§£æå™¨å·¥å‚(å·¥ä½œçš„ä½œç”¨æ˜¯ç”¨äºåˆ›å»ºå…·ä½“çš„è§£æå™¨)
 		DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
-		//Step 2:»ñµÃ¾ßÌåµÄ½âÎöÆ÷
+		//Step 2:è·å¾—å…·ä½“çš„è§£æå™¨
 		DocumentBuilder db = dbf.newDocumentBuilder();
-		//Step 3:½âÎöÒ»¸öxmlÎÄ¼ş£¬»ñµÃDocument¶ÔÏó(¸ù½Úµã)
+		//Step 3:è§£æä¸€ä¸ªxmlæ–‡ä»¶ï¼Œè·å¾—Documentå¯¹è±¡(æ ¹èŠ‚ç‚¹)
 		Document document = db.parse(new File("students.xml"));
 		
-		NodeList nodeList = document.getElementsByTagName("Ñ§Éú");
+		NodeList nodeList = document.getElementsByTagName("å­¦ç”Ÿ");
 		
 		for(int i= 0 ;i < nodeList.getLength();i++)
 		{
 
 			Element element = (Element)nodeList.item(i);
 			
-			String content= element.getElementsByTagName("ĞÕÃû").item(0).getFirstChild().getNodeValue();
+			String content= element.getElementsByTagName("å§“å").item(0).getFirstChild().getNodeValue();
 			
-			System.out.println("ĞÕÃû£º" + content);
+			System.out.println("å§“åï¼š" + content);
 			
-			content = element.getElementsByTagName("ĞÔ±ğ").item(0).getFirstChild().getNodeValue();
+			content = element.getElementsByTagName("æ€§åˆ«").item(0).getFirstChild().getNodeValue();
 			
-			System.out.println("ĞÔ±ğ£º" + content);
+			System.out.println("æ€§åˆ«ï¼š" + content);
 			
-			content = element.getElementsByTagName("ÄêÁä").item(0).getFirstChild().getNodeValue();
+			content = element.getElementsByTagName("å¹´é¾„").item(0).getFirstChild().getNodeValue();
 			
-			System.out.println("ÄêÁä£º" + content);
+			System.out.println("å¹´é¾„ï¼š" + content);
 		}
 	}
 

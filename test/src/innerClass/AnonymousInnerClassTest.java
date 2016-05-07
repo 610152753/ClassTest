@@ -4,8 +4,8 @@ import java.util.Date;
 
 /*
  * 
- * ÄäÃûÄÚ²¿Àà(Anonymous Inner Class):
- * ÄäÃûÄÚ²¿Àà»áÒşÊ¿µÄ¼Ì³ĞÒ»¸ö¸¸Àà»òÊµÏÖÒ»¸ö½Ó¿Ú¡£
+ * åŒ¿åå†…éƒ¨ç±»(Anonymous Inner Class):
+ * åŒ¿åå†…éƒ¨ç±»ä¼šéšå£«çš„ç»§æ‰¿ä¸€ä¸ªçˆ¶ç±»æˆ–å®ç°ä¸€ä¸ªæ¥å£ã€‚
  * 
  */
 public class AnonymousInnerClassTest {

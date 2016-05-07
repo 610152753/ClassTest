@@ -19,12 +19,12 @@ public class ArrayListTest5
 		
 		for(int i = 0; i < list.size(); i++){
 			System.out.println(list.get(i));
-//			com.qiaoshunlong.Point@290fbc     //Ã»ÓÐtoString·½·¨Ê±ºò
-//			com.qiaoshunlong.Point@1c80b01    //Ã»ÓÐtoString·½·¨Ê±ºò
-//			com.qiaoshunlong.Point@4aa0ce     //Ã»ÓÐtoString·½·¨Ê±ºò
+//			com.qiaoshunlong.Point@290fbc     //æ²¡æœ‰toStringæ–¹æ³•æ—¶å€™
+//			com.qiaoshunlong.Point@1c80b01    //æ²¡æœ‰toStringæ–¹æ³•æ—¶å€™
+//			com.qiaoshunlong.Point@4aa0ce     //æ²¡æœ‰toStringæ–¹æ³•æ—¶å€™
 		}
 		System.out.println(list);
-//		[com.qiaoshunlong.Point@290fbc, com.qiaoshunlong.Point@1c80b01, com.qiaoshunlong.Point@4aa0ce]  //Ã»ÓÐtoString·½·¨Ê±ºò
+//		[com.qiaoshunlong.Point@290fbc, com.qiaoshunlong.Point@1c80b01, com.qiaoshunlong.Point@4aa0ce]  //Ã»ï¿½ï¿½toStringï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½
 		
 	}
 

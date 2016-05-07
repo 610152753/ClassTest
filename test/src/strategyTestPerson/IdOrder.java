@@ -3,7 +3,7 @@ package strategyTestPerson;
 import java.util.Comparator;
 
 /**
- * 按id正序
+ * 鎸塱d姝ｅ簭
  * @author JoePotter
  *
  */
@@ -15,6 +15,6 @@ public class IdOrder implements Comparator<Person>
 	}
     public String getMethodName()
     {
-        return "按id正序";
+        return "鎸塱d姝ｅ簭";
     }
 }

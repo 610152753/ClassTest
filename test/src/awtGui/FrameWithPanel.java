@@ -6,6 +6,11 @@ import java.awt.Panel;
 
 public class FrameWithPanel extends Frame
 {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -2107931866827553343L;
+
 	public FrameWithPanel(String title)
 	{
 		super(title);

@@ -3,10 +3,10 @@ package digitConverToChineseCharactersTool;
 
 /**
  * 
- * Í¨¹ıÃüÁîĞĞÊäÈëÒ»´®×Ö·û£¬Ê×ÏÈÅĞ¶ÏÕâĞ©×Ö·û¶¼ÎªÊı×Ö
- * Èç¹ûÆäÖĞÓĞ×Ö·û²»ÊÇÊı×Ö£¬ÄÇÃ´¾ÍÖ»ÔÚÃüÁîĞĞÉÏÊä³ö"ÓÃ»§ÊäÈëµÄ×Ö·û²»¶¼ÎªÊı£¬ÎŞ·¨×ª»» !"
- * ³ÌĞò½áÊø£»
- * Èç¹ûÓÃ»§ÊäÈëµÄ¶¼ÎªÊı×Ö£¬ÄÇÃ´½«¸ÃÊı×Ö×ª»»ÎªÖĞÎÄµÄ´óĞ´µÄ±íÊ¾(Ã¿´ÎÓÃ»§×î¶àÊäÈë8¸ö×Ö·û)¡£
+ * é€šè¿‡å‘½ä»¤è¡Œè¾“å…¥ä¸€ä¸²å­—ç¬¦ï¼Œé¦–å…ˆåˆ¤æ–­è¿™äº›å­—ç¬¦éƒ½ä¸ºæ•°å­—
+ * å¦‚æœå…¶ä¸­æœ‰å­—ç¬¦ä¸æ˜¯æ•°å­—ï¼Œé‚£ä¹ˆå°±åªåœ¨å‘½ä»¤è¡Œä¸Šè¾“å‡º"ç”¨æˆ·è¾“å…¥çš„å­—ç¬¦ä¸éƒ½ä¸ºæ•°ï¼Œæ— æ³•è½¬æ¢ !"
+ * ç¨‹åºç»“æŸï¼›
+ * å¦‚æœç”¨æˆ·è¾“å…¥çš„éƒ½ä¸ºæ•°å­—ï¼Œé‚£ä¹ˆå°†è¯¥æ•°å­—è½¬æ¢ä¸ºä¸­æ–‡çš„å¤§å†™çš„è¡¨ç¤º(æ¯æ¬¡ç”¨æˆ·æœ€å¤šè¾“å…¥8ä¸ªå­—ç¬¦)ã€‚
  *
  */
 public class Conver {
@@ -24,18 +24,18 @@ public class Conver {
 					cv.converStart(args[0]);
 
 				} else {
-					System.out.println("ÓÃ»§ÊäÈëµÄ×Ö·û²»¶¼ÎªÊı£¬ÎŞ·¨×ª»» !");
+					System.out.println("ç”¨æˆ·è¾“å…¥çš„å­—ç¬¦ä¸éƒ½ä¸ºæ•°ï¼Œæ— æ³•è½¬æ¢ !");
 				}
 			}
 			else
 			{
-				System.out.println("ÇëÊäÈë°ËÎ»ÒÔÄÚµÄÊı×Ö !");
+				System.out.println("è¯·è¾“å…¥å…«ä½ä»¥å†…çš„æ•°å­— !");
 			}
 			
 
 		}
 		else{
-			System.out.println("ÇëÊäÈë°ËÎ»ÒÔÄÚµÄÊı×Ö !");
+			System.out.println("è¯·è¾“å…¥å…«ä½ä»¥å†…çš„æ•°å­— !");
 		}
 		
 	}
@@ -43,7 +43,7 @@ public class Conver {
 	{
 		String strR = "";
 		String strVal = "";
-		//È¥µô¿ªÍ·µÄ0
+		//å»æ‰å¼€å¤´çš„0
 		for(int i = 0 ; i < str.length() ; i++ )
 		{
 			if(!"0".equals(str.substring(i, i+1)))
@@ -56,20 +56,20 @@ public class Conver {
 		}
 		if(strVal.length() == 0)
 		{
-			System.out.println("Áã");
+			System.out.println("é›¶");
 		}
 		else
 		{
 			for( int j = 0 ; j < strVal.length(); j++ )
 			{
 				
-				//Á¬Ğø¶à¸öÁãµÄ´¦Àí
+				//è¿ç»­å¤šä¸ªé›¶çš„å¤„ç†
 				if ("0".equals(strVal.substring(j, j + 1))) {
 
-						//ÍòÎ»ÎªÁãµÄÇé¿ö
+						//ä¸‡ä½ä¸ºé›¶çš„æƒ…å†µ
 						if(j == strVal.length() -5)
 						{
-							strR = strR + "Íò";
+							strR = strR + "ä¸‡";
 						}
 						
 						strR = strR + digitConver(strVal.substring(j, j + 1).charAt(0));
@@ -84,24 +84,24 @@ public class Conver {
 				}
 
 			}
-			//È¥µô½áÎ²µÄÁã
+			//å»æ‰ç»“å°¾çš„é›¶
 			for(int i = strR.length() ; i > 0  ; i-- )
 			{
-				if(!"Áã".equals(strR.substring(i-1, i)))
+				if(!"é›¶".equals(strR.substring(i-1, i)))
 				{
 					strR = strR.substring(0, i);
 					break;
 				}
 			}
 
-			//È¥µôÁ¬ĞøÖØ¸´µÄÁã£¬±£ÁôÒ»¸öÁã
+			//å»æ‰è¿ç»­é‡å¤çš„é›¶ï¼Œä¿ç•™ä¸€ä¸ªé›¶
 			strR = rmRepeated(strR);
-			System.out.println(strR.replace("ÁãÍò", "Íò"));
+			System.out.println(strR.replace("é›¶ä¸‡", "ä¸‡"));
 		}
 		
 	}
     /*
-     * Çå³ı×Ö·û´®ÖĞÁ¬ĞøÖØ¸´Ëã·¨
+     * æ¸…é™¤å­—ç¬¦ä¸²ä¸­è¿ç»­é‡å¤ç®—æ³•
      */
     private String rmRepeated(String s){
         int len = s.length();
@@ -117,9 +117,9 @@ public class Conver {
                 while(k<len-count){
                 if(c[i]==c[k]){
                     for(int j=k;j<len-1;j++){
-                    c[j] = c[j+1];//³öÏÖÖØ¸´×ÖÄ¸£¬´ÓkÎ»ÖÃ¿ªÊ¼½«Êı×éÍùÇ°Å²Î»
+                    c[j] = c[j+1];//å‡ºç°é‡å¤å­—æ¯ï¼Œä»kä½ç½®å¼€å§‹å°†æ•°ç»„å¾€å‰æŒªä½
                     }
-                    count++;//ÖØ¸´³öÏÖµÄ´ÎÊı
+                    count++;//é‡å¤å‡ºç°çš„æ¬¡æ•°
                     k--;
                     i--;
                 }
@@ -142,19 +142,19 @@ public class Conver {
 		switch(len)
 		{
 		   case 2:
-			   reVal = "Ê®";break;
+			   reVal = "å";break;
 		   case 3:
-			   reVal = "°Ù";break;
+			   reVal = "ç™¾";break;
 		   case 4:
-			   reVal = "Ç§";break;
+			   reVal = "åƒ";break;
 		   case 5:
-			   reVal = "Íò";break;
+			   reVal = "ä¸‡";break;
 		   case 6:
-			   reVal = "Ê®";break;
+			   reVal = "å";break;
 		   case 7:
-			   reVal = "°Ù";break;
+			   reVal = "ç™¾";break;
 		   case 8:
-			   reVal = "Ç§";break;
+			   reVal = "åƒ";break;
 		   default:
 			   reVal = "";
 		}
@@ -169,25 +169,25 @@ public class Conver {
 		switch(digit)
 		{
 		   case '1':
-			   returnVal = "Ò¼";break;
+			   returnVal = "å£¹";break;
 		   case '2':
-			   returnVal = "·¡";break;
+			   returnVal = "è´°";break;
 		   case '3':
-			   returnVal = "Èş";break;
+			   returnVal = "å";break;
 		   case '4':
-			   returnVal = "ËÁ";break;
+			   returnVal = "è‚†";break;
 		   case '5':
-			   returnVal = "Îé";break;
+			   returnVal = "ä¼";break;
 		   case '6':
-			   returnVal = "Â½";break;
+			   returnVal = "é™†";break;
 		   case '7':
-			   returnVal = "Æâ";break;
+			   returnVal = "æŸ’";break;
 		   case '8':
-			   returnVal = "°Æ";break;
+			   returnVal = "æŒ";break;
 		   case '9':
-			   returnVal = "¾Á";break;
+			   returnVal = "ç–";break;
 		   default:
-			   returnVal = "Áã";
+			   returnVal = "é›¶";
 			
 		}
 		return returnVal;

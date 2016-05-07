@@ -1,9 +1,24 @@
 <project name="mybuild" basedir="." default="package">
 	
+	<tstamp></tstamp>  <!--JAR文件结尾的时间 需要声明 -->
+	<property environment="env"/>
 	<property name="reportpath" value="rep"/>
 	<property name="compilepath" value="compile"/>
 	<property name="srcpath" value="src"/>
 	<property name="jarpath" value="jar"></property>
+	<property name="libpath" value="lib"></property>
+	<property name="java.lib.dir" value="${env.JAVA_HOME}/lib" />
+	<!-- 基本编译路径设置 定义多个classpath-->
+	<path id="classpaht">
+		<fileset dir="${java.lib.dir}">
+			<include name="tools.jar"/>
+		</fileset>
+		<fileset dir="${libpath}">
+			<include name="*.jar"/>
+		</fileset>
+	</path>
+	
+	
 	
 	<target name="init" depends="clean">
 	  <mkdir dir= "${reportpath}"/>
@@ -18,15 +33,47 @@
 		<delete dir="${jarpath}"/>
 	</target>
 	
-	<target name="compile" depends="init,clean">
-		<javac srcdir="${srcpath}" destdir="${compilepath}"/>
+	<target name="compile" depends="init">
+		<javac srcdir="${srcpath}" destdir="${compilepath}" includeantruntime="ON" >
+			<classpath refid="classpaht" />
+		</javac>
 	</target>
 	
 	<target name="packagejar" depends="compile">
-		<jar destfile="${jarpath}/test.jar" basedir="${compilepath}" ></jar>
+		
+		
+		<jar destfile="${jarpath}/test-${DSTAMP}.jar" basedir="${compilepath}" >
+			<manifest>
+				<attribute name="BuildBy" value="${user.name}"/>
+				<attribute name="MAIN-CLASS" value="swingTest.MenuTest"/>  <!--指定main的入口类 -->
+			</manifest>
+		</jar>
 	</target>
 	
 	<target name="package" depends="compile">
 		
 	</target>
+	
+	<target name="copy">  <!-- 复制文件到指定目录 或指定文件-->
+		<copy file="${jarpath}/test-${DSTAMP}.jar" todir="d:/"></copy>
+	</target>
+	<target name="copy2"> <!-- 模式匹配 -->
+		<copy todir="${reportpath}">
+			<fileset dir="${srcpath}">
+				<include name="**/*.java"/>
+			</fileset>
+	    </copy>
+	</target>
+	<target name="move"> <!--移动或者重命名文件 -->
+		<move file="d:/test-${DSTAMP}.jar" tofile="${jarpath}/test-aa.jar"></move>
+	</target>
+	<!-- 压缩zip文件 也支持解压unzip-->
+	<target name="zip">
+		<zip destfile="${reportpath}/test.zip" basedir="${jarpath}">
+		</zip>
+	</target>
+
+	
+	
+	
 </project>

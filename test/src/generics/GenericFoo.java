@@ -1,8 +1,8 @@
 package generics;
 
 /**
- * ��û��ָ�����ͼ̳е����ͻ�ӿ�ʱ��
- * Ĭ��ʹ�� T entends Object,����Ĭ��������κ����Ͷ�������Ϊ��������
+ * 当没有指定泛型继承的类型或接口时，
+ * 默认使用 T entends Object,所以默认情况下任何类型都可以作为参数传入
  * @author JoePotter
  *
  * @param <T>

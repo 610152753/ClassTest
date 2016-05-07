@@ -20,18 +20,18 @@ public class InvokeTester
 //		System.out.println(test.add(1, 2));
 //		System.out.println(test.echo("tom"));
 		
-		//»ñÈ¡ÀàµÄclass¶ÔÏó
+		//è·å–ç±»çš„classå¯¹è±¡
 		Class<?> classType = InvokeTester.class;
 		
-		//Éú²úÀàµÄÊµÀı¶ÔÏó
+		//ç”Ÿäº§ç±»çš„å®ä¾‹å¯¹è±¡
 		Object invokeTester = classType.newInstance();
 		
 		System.out.println(invokeTester instanceof InvokeTester);
 		
-		//»ñÈ¡¶ÔÓ¦ÊµÀıµÄ·½·¨
+		//è·å–å¯¹åº”å®ä¾‹çš„æ–¹æ³•
 		Method addMethod = classType.getMethod("add", new Class[]{int.class,int.class});
 		
-		//µ÷ÓÃinvokeTesterÕâ¸ö¶ÔÏóµÄaddMethodÕâ¸ö·½·¨
+		//è°ƒç”¨invokeTesterè¿™ä¸ªå¯¹è±¡çš„addMethodè¿™ä¸ªæ–¹æ³•
 		Object result = addMethod.invoke(invokeTester, new Object[]{1,3});
 		
 		System.out.println((Integer)result);

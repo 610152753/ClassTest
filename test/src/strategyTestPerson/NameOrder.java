@@ -9,11 +9,11 @@ public class NameOrder implements Comparator<Person>
 		int result = p1.getName().compareTo(p2.getName());
 		if( 0 == result)
 		{
-		  return p1.getId() - p2.getId();      //ÈôĞÕÃûÏàÍ¬Ôò°´idÅÅĞò
+		  return p1.getId() - p2.getId();      //è‹¥å§“åç›¸åŒåˆ™æŒ‰idæ’åº
 		}
 		return result;
 	}
 	public String getMethodName(){
-		return "°´ĞÕÃûÕıĞò";
+		return "æŒ‰å§“åæ­£åº";
 	}
 }

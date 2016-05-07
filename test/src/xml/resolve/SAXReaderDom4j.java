@@ -32,16 +32,16 @@ public class SAXReaderDom4j {
 		
 		System.out.println(childList.size());
 		
-		Element first = root.element("学生");
+		Element first = root.element("瀛︾敓");
 		
-		System.out.println(first.attributeValue("学号"));
+		System.out.println(first.attributeValue("瀛﹀彿"));
 		
 		for(@SuppressWarnings("unchecked")
 		Iterator<e> iter = root.elementIterator();iter.hasNext();)
 		{
 			Element e = (Element)iter.next();
 			
-			System.out.println(" attr:"+ e.attributeValue("学号"));
+			System.out.println(" attr:"+ e.attributeValue("瀛﹀彿"));
 		}
 		
 		System.out.println("-----------------------------------");
@@ -54,7 +54,7 @@ public class SAXReaderDom4j {
 		
 		DOMReader domreader = new DOMReader();
 		
-		//将JAXP的Document转换为DOM4J的Document
+		//灏咼AXP鐨凞ocument杞崲涓篋OM4J鐨凞ocument
 		Document d= domreader.read(document);
 		
 		Element rootelement = d.getRootElement();

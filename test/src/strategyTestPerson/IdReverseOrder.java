@@ -3,7 +3,7 @@ package strategyTestPerson;
 import java.util.Comparator;
 
 /**
- * °´idÄæĞò
+ * æŒ‰idé€†åº
  * @author JoePotter
  *
  */
@@ -16,6 +16,6 @@ public class IdReverseOrder implements Comparator<Person>
 	
     public String getMethodName()
     {
-        return "°´idÄæĞò";
+        return "æŒ‰idé€†åº";
     }
 }

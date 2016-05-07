@@ -12,7 +12,7 @@ public class DynamicProxyClient
 		InvocationHandler handler = new ProxyDynamicSubject(realSubject);
 		
 		Class<?> classType = handler.getClass();
-		//ÏÂÃæ´úÂëÒ»´ÎĞÔÉú²ú´úÀí¶ÔÏó
+		//ä¸‹é¢ä»£ç ä¸€æ¬¡æ€§ç”Ÿäº§ä»£ç†å¯¹è±¡
 		
 		Subject subject = (Subject) Proxy.newProxyInstance(classType.getClassLoader(), 
 				realSubject.getClass().getInterfaces(), handler);

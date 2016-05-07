@@ -15,9 +15,9 @@ public class RandomNumberMap
 
 	public static void main(String[] args)
 	{
-		Map map = new TreeMap(); // ÓĞĞò(ÉıĞò£¬×ÔÈ»Ë³Ğò)µÄÓ³Ïñ(Map)£¬key´æ·ÅµÄÊÇ:Ëæ»úÊı£¬value´æ·ÅµÄÊÇ:Ëæ»úÊı³öÏÖµÄ´ÎÊı
+		Map map = new TreeMap(); // æœ‰åº(å‡åºï¼Œè‡ªç„¶é¡ºåº)çš„æ˜ åƒ(Map)ï¼Œkeyå­˜æ”¾çš„æ˜¯:éšæœºæ•°ï¼Œvalueå­˜æ”¾çš„æ˜¯:éšæœºæ•°å‡ºç°çš„æ¬¡æ•°
 
-		List list = new ArrayList(); // ´æ·Å³öÏÖ´ÎÊı×î¶àµÄÄÇĞ©Êı×Ö
+		List list = new ArrayList(); // å­˜æ”¾å‡ºç°æ¬¡æ•°æœ€å¤šçš„é‚£äº›æ•°å­—
 
 		Random random = new Random();
 
@@ -50,7 +50,7 @@ public class RandomNumberMap
 
 		Integer getKeyCol = (Integer) Collections.max(keyCol);
 
-		// ±éÀúMap·½·¨Ò»
+		// éå†Mapæ–¹æ³•ä¸€
 		// Set set = map.keySet();
 		//
 		// for (Iterator iterator = set.iterator(); iterator.hasNext();)
@@ -64,7 +64,7 @@ public class RandomNumberMap
 		//
 		// }
 
-		// ±éÀúMap·½·¨¶ş
+		// éå†Mapæ–¹æ³•äºŒ
 		Set set = map.entrySet();
 
 		for (Iterator iterator = set.iterator(); iterator.hasNext();)
@@ -89,9 +89,9 @@ public class RandomNumberMap
 
 		System.out.println("---------------");
 
-		System.out.println("³öÏÖµÄ×î¶àµÄ´ÎÊıÎª£º" + maxOccurs.intValue());
+		System.out.println("å‡ºç°çš„æœ€å¤šçš„æ¬¡æ•°ä¸ºï¼š" + maxOccurs.intValue());
 
-		System.out.print("ÕâĞ©Êı×Ö·Ö±ğÊÇ:");
+		System.out.print("è¿™äº›æ•°å­—åˆ†åˆ«æ˜¯:");
 
 		for (Iterator iter = list.iterator(); iter.hasNext();)
 		{
@@ -102,7 +102,7 @@ public class RandomNumberMap
 
 		System.out.println("---------------");
 
-		System.out.println("³öÏÖµÄ×î´óµÄÊı×ÖÊÇ£º" + getKeyCol);
+		System.out.println("å‡ºç°çš„æœ€å¤§çš„æ•°å­—æ˜¯ï¼š" + getKeyCol);
 	}
 
 }

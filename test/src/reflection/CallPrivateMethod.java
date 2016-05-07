@@ -21,7 +21,7 @@ public class CallPrivateMethod
 		 * 
 		 */
 		
-		method.setAccessible(true);   //½ûÖ¹javaµÄ·ÃÎÊ¿ØÖÆ¼ì²é
+		method.setAccessible(true);   //ç¦æ­¢javaçš„è®¿é—®æ§åˆ¶æ£€æŸ¥
 		
 		String str = (String)method.invoke(p, new Object[]{"li si"});
 		

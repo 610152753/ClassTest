@@ -17,7 +17,7 @@ public class ArrayListTest4
 		Object[] in = list.toArray();
 //		Integer[] in = (Integer[])list.toArray();
 		/*
-		 * 不能将Object[]转换为Integer[];
+		 * 涓嶈兘灏哋bject[]杞崲涓篒nteger[];
 		 */
 		
 //		java.lang.Object; cannot be cast to [Ljava.lang.Integer;]

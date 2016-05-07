@@ -13,31 +13,31 @@ import org.dom4j.io.XMLWriter;
 public class dom4jTest {
 	public static void main(String[] args) throws IOException {
 		
-//		//´´½¨ÎÄµµ²¢ÉèÖÃÎÄµµµÄ¸ùÔªËØ£ºµÚÒ»ÖÖ·½Ê½
+//		//åˆ›å»ºæ–‡æ¡£å¹¶è®¾ç½®æ–‡æ¡£çš„æ ¹å…ƒç´ ï¼šç¬¬ä¸€ç§æ–¹å¼
 //		
 //		Document document = DocumentHelper.createDocument();
 //		
-//		Element root = DocumentHelper.createElement("Ñ§ÉúÊÖ²á");
+//		Element root = DocumentHelper.createElement("å­¦ç”Ÿæ‰‹å†Œ");
 //		
 //		document.setRootElement(root);
 		
-		//´´½¨ÎÄµµ²¢ÉèÖÃÎÄµµµÄ¸ùÔªËØ:µÚ¶şÖÖ·½Ê½
+		//åˆ›å»ºæ–‡æ¡£å¹¶è®¾ç½®æ–‡æ¡£çš„æ ¹å…ƒç´ :ç¬¬äºŒç§æ–¹å¼
 		
-		Element root = DocumentHelper.createElement("Ñ§ÉúÊÖ²á");
+		Element root = DocumentHelper.createElement("å­¦ç”Ÿæ‰‹å†Œ");
 		Document document = DocumentHelper.createDocument(root);
 		
-		Element student = DocumentHelper.createElement("Ñ§Éú");
+		Element student = DocumentHelper.createElement("å­¦ç”Ÿ");
 		
 		root.add(student);
 		
-		student.addAttribute("Ñ§ºÅ", "1");
+		student.addAttribute("å­¦å·", "1");
 		
 		
-		Element name = student.addElement("ĞÕÃû");
-		Element sex =  student.addElement("ĞÔ±ğ");
+		Element name = student.addElement("å§“å");
+		Element sex =  student.addElement("æ€§åˆ«");
 		
-		name.addText("ÕÅÈı");
-		sex.addText("Å®");
+		name.addText("å¼ ä¸‰");
+		sex.addText("å¥³");
 		
 		XMLWriter xmlw = new XMLWriter();
 		
@@ -45,7 +45,7 @@ public class dom4jTest {
 		
 		OutputFormat format = new OutputFormat("  ",true,"gbk");
 		
-		//FileWriterÒ²¿ÉÒÔÊ¹ÓÃ
+		//FileWriterä¹Ÿå¯ä»¥ä½¿ç”¨
 		XMLWriter xmlw1 = new XMLWriter(new FileOutputStream(new File("dom4j.xml")),format);
 		
 		xmlw1.write(document);

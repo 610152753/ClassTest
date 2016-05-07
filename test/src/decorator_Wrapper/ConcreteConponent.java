@@ -2,7 +2,7 @@ package decorator_Wrapper;
 
 /**
  * 
- * ¾ßÌå¹¹¼ş½ÇÉ«£¨Concrete Component£©£º¶¨ÒåÒ»¸ö½«Òª½ÓÊÕ¸½¼ÓÔğÈÎµÄÀà¡£
+ * å…·ä½“æ„ä»¶è§’è‰²ï¼ˆConcrete Componentï¼‰ï¼šå®šä¹‰ä¸€ä¸ªå°†è¦æ¥æ”¶é™„åŠ è´£ä»»çš„ç±»ã€‚
  * 
  * @author Joe
  *
@@ -11,7 +11,7 @@ public class ConcreteConponent implements Component {
 
 	public void dosomething() {
 
-		System.out.println("¹¦ÄÜA");
+		System.out.println("åŠŸèƒ½A");
 	}
 
 }

@@ -3,20 +3,20 @@ package proxyTest;
 public class ProxySubject extends Subject
 {
 
-	private RealSubject realsubject; //´úÀí½ÇÉ«ÄÚ²¿ÒıÓÃÁËÕæÊµ½ÇÉ«
+	private RealSubject realsubject; //ä»£ç†è§’è‰²å†…éƒ¨å¼•ç”¨äº†çœŸå®è§’è‰²
 	
 	public void request()
 	{
-		this.preReques();  //ÔÚÕæÊµ½ÇÉ«²Ù×÷Ö®Ç°Ëù¸½¼ÓµÄ²Ù×÷
+		this.preReques();  //åœ¨çœŸå®è§’è‰²æ“ä½œä¹‹å‰æ‰€é™„åŠ çš„æ“ä½œ
 		
 		if(null == realsubject)
 		{
 			realsubject = new RealSubject();
 		}
 		
-		realsubject.request(); //ÕæÊÇ½ÇÉ«ËùÍê³ÉµÄÊÂÇé
+		realsubject.request(); //çœŸæ˜¯è§’è‰²æ‰€å®Œæˆçš„äº‹æƒ…
 		
-		this.postRequest();  //ÔÚÕæÊµ½ÇÉ«²Ù×÷Ö®ºó¸½¼ÓµÄ²Ù×÷
+		this.postRequest();  //åœ¨çœŸå®è§’è‰²æ“ä½œä¹‹åé™„åŠ çš„æ“ä½œ
 	}
 	
 	private void preReques()

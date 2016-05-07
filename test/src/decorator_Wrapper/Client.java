@@ -4,16 +4,16 @@ public class Client {
 	
 	public static void main(String[] args) {
 		
-		//½ÚµãÁ÷
+		//èŠ‚ç‚¹æµ
 		Component component = new ConcreteConponent();
-		//¹ıÂËÁ÷
+		//è¿‡æ»¤æµ
 		Component component1 = new ConcreteDecorator(component);
-		//¹ıÂËÁ÷
+		//è¿‡æ»¤æµ
 		Component component2 = new ConcreteDecorator1(component1);
 		
 		component2.dosomething();
 		
-		//ÏÂÃæµÄ·½·¨ºÍÉÏÃæµÄ·½·¨ÊµÏÖµÄ¹¦ÄÜÊÇÒ»ÑùµÄ¡£
+		//ä¸‹é¢çš„æ–¹æ³•å’Œä¸Šé¢çš„æ–¹æ³•å®ç°çš„åŠŸèƒ½æ˜¯ä¸€æ ·çš„ã€‚
 		System.out.println("||-------------------------------||");
 		
 		Component conponentAll = new ConcreteDecorator1(new ConcreteDecorator(new ConcreteConponent()));

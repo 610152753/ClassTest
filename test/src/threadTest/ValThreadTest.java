@@ -28,7 +28,7 @@ public class ValThreadTest {
 }
 /**
  * 
- * ×¢Òâ£ºĞèÒªÀí½â³ÉÔ±±äÁ¿ºÍ¾Ö²¿±äÁ¿µÄÇø±ğ
+ * æ³¨æ„ï¼šéœ€è¦ç†è§£æˆå‘˜å˜é‡å’Œå±€éƒ¨å˜é‡çš„åŒºåˆ«
  * 
  * @author Joe
  *
@@ -42,8 +42,8 @@ class HelloThread implements Runnable
 		int i = 0;
 		while(true)
 		{
-//			System.out.println("number £º "  + i++);
-			System.out.println("number £º "  + this.i++);
+//			System.out.println("number ï¼š "  + i++);
+			System.out.println("number ï¼š "  + this.i++);
 			try{
 				Thread.sleep((long)Math.random() * 6000);
 			}

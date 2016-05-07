@@ -5,7 +5,7 @@ import java.net.URL;
 
 
 /**
- * URL:ͳһ��Դ��λ��
+ * URL:统一资源定位符
  * 
  * @author Joe
  *

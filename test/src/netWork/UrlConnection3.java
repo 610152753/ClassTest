@@ -41,7 +41,7 @@ class Win extends JFrame implements ActionListener, Runnable
 	{
 		text = new JTextField(20);
 		area = new JTextArea(12, 12);
-		button = new JButton("È·¶¨");
+		button = new JButton("ç¡®å®š");
 
 		button.addActionListener(this);
 
@@ -49,7 +49,7 @@ class Win extends JFrame implements ActionListener, Runnable
 
 		JPanel p = new JPanel();
 
-		p.add(new JLabel("ÊäÈëÍøÖ·:"));
+		p.add(new JLabel("è¾“å…¥ç½‘å€:"));
 		p.add(text);
 		p.add(button);
 
@@ -77,7 +77,7 @@ class Win extends JFrame implements ActionListener, Runnable
 		}
 		catch (Exception ee)
 		{
-			JOptionPane.showMessageDialog(this, "ÎÒÕıÔÚ¶ÁÈ¡£¬ÇëÉÔºó", "ÌáÊ¾ĞÅÏ¢",
+			JOptionPane.showMessageDialog(this, "æˆ‘æ­£åœ¨è¯»å–ï¼Œè¯·ç¨å", "æç¤ºä¿¡æ¯",
 					JOptionPane.ERROR_MESSAGE);
 		}
 	}

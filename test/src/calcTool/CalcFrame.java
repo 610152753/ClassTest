@@ -33,22 +33,22 @@ public class CalcFrame implements ActionListener {
 	private JButton buttonf;
 	private JTextField textField;
 
-	//²Î¿¼Ä£Ê½ £ºA ÔËËã·ûa B ÔËËã·ûb (1+11+  ÏÔÊ¾  £º12+ )  
+	//å‚è€ƒæ¨¡å¼ ï¼šA è¿ç®—ç¬¦a B è¿ç®—ç¬¦b (1+11+  æ˜¾ç¤º  ï¼š12+ )  
 	
-	private String strVal;  //½ÓÊÜÊı×ÖÓÃµÄÁÙÊ±±äÁ¿
-	private String cflag;   //Á¬ĞøÊäÈë¶à¸öÔËËã·ûµÄÊ±ÓÃµÄ¿ØÖÆ±äÁ¿
-	private String equflag = "0";  //¶à´ÎÊäÈëµÈºÅµÄÊ±ºòÓÃµÄ¿ØÖÆ±äÁ¿(ÔËËã·ûºÅ·¢Éú¹ıÒ»´Î±ä»¯)
-	private String equflag1 = "0";  //¶à´ÎÊäÈëµÈºÅµÄÊ±ºòÓÃµÄ¿ØÖÆ±äÁ¿(ÔËËã·ûºÅÃ»ÓĞ·¢Éú±ä»¯)
-	private String strVaDisp;  //ÏÔÊ¾ÓÃµÄ±äÁ¿
-	private String calcValA;  //ÔËËãÊıA
-	private String calcValB;  //ÔËËãÊıB
-	private String calcValBTemp; //¶à´ÎÊäÈëµÈºÅµÄÊ±ºò£¬±£´æÁÙÊ±±äÁ¿ÓÃ
-	private String optionFlagA; //²Ù×÷·ûA
-	private String optionFlagB; //²Ù×÷·ûB
+	private String strVal;  //æ¥å—æ•°å­—ç”¨çš„ä¸´æ—¶å˜é‡
+	private String cflag;   //è¿ç»­è¾“å…¥å¤šä¸ªè¿ç®—ç¬¦çš„æ—¶ç”¨çš„æ§åˆ¶å˜é‡
+	private String equflag = "0";  //å¤šæ¬¡è¾“å…¥ç­‰å·çš„æ—¶å€™ç”¨çš„æ§åˆ¶å˜é‡(è¿ç®—ç¬¦å·å‘ç”Ÿè¿‡ä¸€æ¬¡å˜åŒ–)
+	private String equflag1 = "0";  //å¤šæ¬¡è¾“å…¥ç­‰å·çš„æ—¶å€™ç”¨çš„æ§åˆ¶å˜é‡(è¿ç®—ç¬¦å·æ²¡æœ‰å‘ç”Ÿå˜åŒ–)
+	private String strVaDisp;  //æ˜¾ç¤ºç”¨çš„å˜é‡
+	private String calcValA;  //è¿ç®—æ•°A
+	private String calcValB;  //è¿ç®—æ•°B
+	private String calcValBTemp; //å¤šæ¬¡è¾“å…¥ç­‰å·çš„æ—¶å€™ï¼Œä¿å­˜ä¸´æ—¶å˜é‡ç”¨
+	private String optionFlagA; //æ“ä½œç¬¦A
+	private String optionFlagB; //æ“ä½œç¬¦B
 
 	public void menuFrame() {
 		if (jFrame == null) {
-			jFrame = new JFrame("¼ÆËãÆ÷");
+			jFrame = new JFrame("è®¡ç®—å™¨");
 			jFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 			textField = new JTextField();
 			textField.setSize(240, 60);
@@ -152,7 +152,7 @@ public class CalcFrame implements ActionListener {
 	public void actionPerformed(ActionEvent e)
 	{
 		System.out.println(e.getActionCommand());
-		//»ñÈ¡ÊäÈëµÄÊı×Ö£¬²¢¸³Öµ¸øÏÔÊ¾ÓÃµÄ±äÁ¿
+		//è·å–è¾“å…¥çš„æ•°å­—ï¼Œå¹¶èµ‹å€¼ç»™æ˜¾ç¤ºç”¨çš„å˜é‡
 		if(isNumeric(e.getActionCommand()))
 		{
 			if(strVal != null)
@@ -169,7 +169,7 @@ public class CalcFrame implements ActionListener {
 			}
 			else
 			{
-				//¶à´ÎÊäÈëµÈºÅºóÔÙ´ÎÊäÈëÔËËãÊıµÄ´¦Àí
+				//å¤šæ¬¡è¾“å…¥ç­‰å·åå†æ¬¡è¾“å…¥è¿ç®—æ•°çš„å¤„ç†
 				if(equflag == "1" || equflag1 == "1")
 				{
 					strVaDisp = strVal;
@@ -182,13 +182,13 @@ public class CalcFrame implements ActionListener {
 				}
 
 			}
-			//ÊäÈëµÄÊÇµÈºÅÊ±
+			//è¾“å…¥çš„æ˜¯ç­‰å·æ—¶
 		}else if(e.getActionCommand() == "=")
 		{
-			//µ±ÊäÈëµÄËãÊ½ÊÇÕâÑùÑùÊ½(A ÔËËã·û)Ê±£ºÔÙ´ÎÊäÈëµÈºÅ×öÒ»ÏÂ´¦Àí¡£
+			//å½“è¾“å…¥çš„ç®—å¼æ˜¯è¿™æ ·æ ·å¼(A è¿ç®—ç¬¦)æ—¶ï¼šå†æ¬¡è¾“å…¥ç­‰å·åšä¸€ä¸‹å¤„ç†ã€‚
 			if(calcValA != null && optionFlagA != null && strVal == null)
 			{
-				//¶à´ÎÁ¬ĞøÊäÈëµÈºÅµÄ´¦Àí£¬Èç¹ûÔËËã·û·¢Éú±ä»¯Ê±£¬½«ÔËËãÊıcalcValB¸ÄÎªµ±Ç°µÄA£¬ÔÙ´ËÁ¬ĞøµÄÔËËã
+				//å¤šæ¬¡è¿ç»­è¾“å…¥ç­‰å·çš„å¤„ç†ï¼Œå¦‚æœè¿ç®—ç¬¦å‘ç”Ÿå˜åŒ–æ—¶ï¼Œå°†è¿ç®—æ•°calcValBæ”¹ä¸ºå½“å‰çš„Aï¼Œå†æ­¤è¿ç»­çš„è¿ç®—
 				if(equflag == "0" && equflag1 == "0")
 				{
 					calcValBTemp = calcValA;
@@ -200,16 +200,16 @@ public class CalcFrame implements ActionListener {
 				calcValB = null;
 				strVal = null;
 			}
-			//Á½¸öÔËËãÊıºÍÒ»¸öÔËËã·û¶¼ÒÑ¾­Õı³£»ñÈ¡ºó£¬ÔÙ´ÎÊäÈëÁËµÈºÅµÄ´¦Àí,Ã»ÓĞÇå¿ÕoptionFlagAÊÇÎªÁËÁ¬ĞøÔÙ´ÎÊäÈëµÈºÅÓÃ£¬
-			//ÊµÏÖÁ¬ĞøµÄÔËËã
+			//ä¸¤ä¸ªè¿ç®—æ•°å’Œä¸€ä¸ªè¿ç®—ç¬¦éƒ½å·²ç»æ­£å¸¸è·å–åï¼Œå†æ¬¡è¾“å…¥äº†ç­‰å·çš„å¤„ç†,æ²¡æœ‰æ¸…ç©ºoptionFlagAæ˜¯ä¸ºäº†è¿ç»­å†æ¬¡è¾“å…¥ç­‰å·ç”¨ï¼Œ
+			//å®ç°è¿ç»­çš„è¿ç®—
 			if(calcValA != null && optionFlagA != null && strVal != null)
 			{
-				//³ıÊıÎª0µÄ´¦Àí
+				//é™¤æ•°ä¸º0çš„å¤„ç†
 				if(optionFlagA == "/" && strVal == "0")
 				{
-					calcValA = null;  //Çå¿ÕÔËËãÊıA
-					optionFlagA = null; //Çå¿ÕÔËËã·ûa
-					strVaDisp = "³ıÊıÎªÁãÖØĞÂÊäÈë£¡";  //ÏÔÊ¾ĞÅÏ¢¸³Öµ
+					calcValA = null;  //æ¸…ç©ºè¿ç®—æ•°A
+					optionFlagA = null; //æ¸…ç©ºè¿ç®—ç¬¦a
+					strVaDisp = "é™¤æ•°ä¸ºé›¶é‡æ–°è¾“å…¥ï¼";  //æ˜¾ç¤ºä¿¡æ¯èµ‹å€¼
 				}
 				else
 				{
@@ -227,18 +227,18 @@ public class CalcFrame implements ActionListener {
 		}
 		else
 		{
-			//¶à´ÎÊäÈëµÈºÅµÄÊ±ºò£¬¿ØÖÆÔËËãÊıcalcValBµÄ±ä»¯µÄ±äÁ¿
+			//å¤šæ¬¡è¾“å…¥ç­‰å·çš„æ—¶å€™ï¼Œæ§åˆ¶è¿ç®—æ•°calcValBçš„å˜åŒ–çš„å˜é‡
 			equflag = "0";
 			equflag1 = "0";
 			
 			if(strVal == null)
 			{
-				// ¿ªÊ¼¾ÍÊäÈëÔËËã·ûµÄÇé¿ö£¬×östrVal = "0";
+				// å¼€å§‹å°±è¾“å…¥è¿ç®—ç¬¦çš„æƒ…å†µï¼ŒåšstrVal = "0";
 				strVal = "0";
-				// Á¬ĞøÊäÈë¶à¸öÔËËã·ûµÄÇé¿ö£¬cflag = "1"
+				// è¿ç»­è¾“å…¥å¤šä¸ªè¿ç®—ç¬¦çš„æƒ…å†µï¼Œcflag = "1"
 				cflag = "1";
 			}
-			//µÚÒ»´ÎÊäÈëÔËËã·ûµÄ´¦Àí
+			//ç¬¬ä¸€æ¬¡è¾“å…¥è¿ç®—ç¬¦çš„å¤„ç†
 			if(calcValB == null && optionFlagA == null)
 			{
 				optionFlagA = e.getActionCommand();
@@ -246,7 +246,7 @@ public class CalcFrame implements ActionListener {
 			}
 			else
 			{
-				//Á¬ĞøÊäÈë¶à¸öÔËËã·ûµÄÊ±ºòÔËËã·ûµÄ´¦Àí
+				//è¿ç»­è¾“å…¥å¤šä¸ªè¿ç®—ç¬¦çš„æ—¶å€™è¿ç®—ç¬¦çš„å¤„ç†
 				if(calcValA != null && optionFlagA != null && cflag == "1")
 				{
 					optionFlagA = e.getActionCommand();
@@ -254,14 +254,14 @@ public class CalcFrame implements ActionListener {
 					cflag = "0";
 				}
 				else
-				//ÊäÈëµÚ¶ş¸öÔËËãÊıºóÔÙ´ÎÊäÈëµÄÔËËã·ûµÄ´¦Àí
+				//è¾“å…¥ç¬¬äºŒä¸ªè¿ç®—æ•°åå†æ¬¡è¾“å…¥çš„è¿ç®—ç¬¦çš„å¤„ç†
 				{
 					optionFlagB = e.getActionCommand();
 					strVaDisp = strVal + optionFlagB;
 					System.out.println("optionFlagB set ");
 				}
 			}
-			//½«½ÓÊÜµÄÔËËãÊı·Ö±ğ¸³Öµ¸øÏàÓ¦µÄ±äÁ¿·½±ãµ÷ÓÃ¹²Í¨·½·¨
+			//å°†æ¥å—çš„è¿ç®—æ•°åˆ†åˆ«èµ‹å€¼ç»™ç›¸åº”çš„å˜é‡æ–¹ä¾¿è°ƒç”¨å…±é€šæ–¹æ³•
 			if(calcValA != null && calcValB == null && optionFlagB != null)
 			{
 				calcValB = strVal;
@@ -270,35 +270,35 @@ public class CalcFrame implements ActionListener {
 			{
 				calcValA = strVal;
 			}
-			strVal = null;  //Çå¿Õ½ÓÊÜÔËËãÊıµÄ±äÁ¿
+			strVal = null;  //æ¸…ç©ºæ¥å—è¿ç®—æ•°çš„å˜é‡
 			
-			//Èç¹ûÓĞÁ½¸öÔËËãÊı¶¼²»Îª¿ÕµÄÊ±ºòµÄ´¦Àí
+			//å¦‚æœæœ‰ä¸¤ä¸ªè¿ç®—æ•°éƒ½ä¸ä¸ºç©ºçš„æ—¶å€™çš„å¤„ç†
 			if(calcValA != null && calcValB != null)
 			{
 
-				//³ıÊıÎª0µÄ´¦Àí
+				//é™¤æ•°ä¸º0çš„å¤„ç†
 				if(optionFlagA == "/" && calcValB == "0")
 				{
-					calcValA = null;  //Çå¿ÕÔËËãÊıA
-					optionFlagA = null; //Çå¿ÕÔËËã·ûa
-					strVaDisp = "³ıÊıÎªÁãÖØĞÂÊäÈë£¡";  //ÏÔÊ¾ĞÅÏ¢¸³Öµ
+					calcValA = null;  //æ¸…ç©ºè¿ç®—æ•°A
+					optionFlagA = null; //æ¸…ç©ºè¿ç®—ç¬¦a
+					strVaDisp = "é™¤æ•°ä¸ºé›¶é‡æ–°è¾“å…¥ï¼";  //æ˜¾ç¤ºä¿¡æ¯èµ‹å€¼
 				}
 				else
-				//Á½¸öÔËËãÊı¶¼Õı³£µ÷ÓÃÔËËã·½·¨£¬²¢½«½á¹û·µ»Ø¸øµÚÒ»¸öÔËËãÊı£¬½«µÚ¶ş´Î½ÓÊÜµÄÔËËã·ûb¸³Öµ¸øÔËËã·ûa
+				//ä¸¤ä¸ªè¿ç®—æ•°éƒ½æ­£å¸¸è°ƒç”¨è¿ç®—æ–¹æ³•ï¼Œå¹¶å°†ç»“æœè¿”å›ç»™ç¬¬ä¸€ä¸ªè¿ç®—æ•°ï¼Œå°†ç¬¬äºŒæ¬¡æ¥å—çš„è¿ç®—ç¬¦bèµ‹å€¼ç»™è¿ç®—ç¬¦a
 				{
 					calcValA = clac();
 					optionFlagA = optionFlagB;
 					strVaDisp = calcValA + optionFlagA;
 				}
-				calcValB = null;   //Çå¿ÕÔËËãÊıB
-				optionFlagB = null;  //Çå¿ÕÔËËã·ûb
+				calcValB = null;   //æ¸…ç©ºè¿ç®—æ•°B
+				optionFlagB = null;  //æ¸…ç©ºè¿ç®—ç¬¦b
 			}
 
 		}
-		textField.setText(strVaDisp);  //ÏÔÊ¾ÏàÓ¦µÄĞÅÏ¢
+		textField.setText(strVaDisp);  //æ˜¾ç¤ºç›¸åº”çš„ä¿¡æ¯
 	}
 
-	//¼Ó¼õ³Ë³ıÔËËã·½·¨
+	//åŠ å‡ä¹˜é™¤è¿ç®—æ–¹æ³•
 	public String clac() {
 		
 		double A = Double.parseDouble(calcValA);
@@ -330,7 +330,7 @@ public class CalcFrame implements ActionListener {
 
 	}
 
-	// Ê¹ÓÃÕıÔò±í´ïÊ½£¬ÅĞ¶Ïµ±Ç°ÊäÈëµÄ×Ö·ûÊÇ·ñÊÇÊı×Ö»òÕßĞ¡Êıµã
+	// ä½¿ç”¨æ­£åˆ™è¡¨è¾¾å¼ï¼Œåˆ¤æ–­å½“å‰è¾“å…¥çš„å­—ç¬¦æ˜¯å¦æ˜¯æ•°å­—æˆ–è€…å°æ•°ç‚¹
 	public boolean isNumeric(String str) {
 		Pattern pattern = Pattern.compile("[0-9]|\\.");
 		Matcher isNum = pattern.matcher(str);

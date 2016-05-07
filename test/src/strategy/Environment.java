@@ -3,8 +3,8 @@ package strategy;
 /**
  * 
  *
- * �C 3����ʹ�ò��Զ�������б���һ���Բ��Զ�������á�
- * �C 4����ʹ�ò��Զ�������У�ʵ�ֶԲ��Զ����set��get������ע�룩����ʹ�ù��췽����ɸ�ֵ
+ * – 3．在使用策略对象的类中保存一个对策略对象的引用。
+ * – 4．在使用策略对象的类中，实现对策略对象的set和get方法（注入）或者使用构造方法完成赋值
  * 
  * @author JoePotter
  *
@@ -15,7 +15,7 @@ public class Environment
 
 	/**
 	 * 
-	 * ��ʹ�ò��Զ�������б���һ���Բ��Զ��������
+	 * 在使用策略对象的类中保存一个对策略对象的引用
 	 * 
 	 * @param strategy
 	 */
@@ -26,7 +26,7 @@ public class Environment
 	
 	/**
 	 * 
-	 * ��ʹ�ò��Զ�������У�ʵ�ֶԲ��Զ����set��get������ע�룩
+	 * 在使用策略对象的类中，实现对策略对象的set和get方法（注入）
 	 * 
 	 * @return
 	 */

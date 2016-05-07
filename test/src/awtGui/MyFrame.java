@@ -5,6 +5,11 @@ import java.awt.Frame;
 
 public class MyFrame extends Frame
 {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 3384690116943823448L;
+
 	public MyFrame(String title)
 	{
 		super(title);

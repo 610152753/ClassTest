@@ -5,7 +5,7 @@ import java.util.Map;
 import java.util.TreeMap;
 
 /**
- * SuppressWarnings注解表示抑制警告
+ * SuppressWarnings娉ㄨВ琛ㄧず鎶戝埗璀﹀憡
  *
  */
 public class SuppressWarningTest

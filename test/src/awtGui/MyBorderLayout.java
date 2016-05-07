@@ -33,7 +33,7 @@ public class MyBorderLayout
 		
 //		frame.setSize(550,400);
 		
-		frame.pack();   //¸ù¾İ²¼¾Ö×Ô¶¯µ÷½ÚSizeµÄ´óĞ¡
+		frame.pack();   //æ ¹æ®å¸ƒå±€è‡ªåŠ¨è°ƒèŠ‚Sizeçš„å¤§å°
 		
 		frame.setVisible(true);
 	}

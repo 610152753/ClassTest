@@ -15,7 +15,7 @@ public class MapTest_keySet_Iterator
 			map.put(new Integer(i),new Integer(i + 100));
 		}
 		
-		long startTime=System.currentTimeMillis(); //»ñÈ¡¿ªÊ¼Ê±¼ä
+		long startTime=System.currentTimeMillis(); //è·å–å¼€å§‹æ—¶é—´
 		
 		Set set = map.keySet();
 		
@@ -28,8 +28,8 @@ public class MapTest_keySet_Iterator
 			System.out.println(key + "=" + value);
 		}
 		
-		long endTime=System.currentTimeMillis(); //»ñÈ¡½áÊøÊ±¼ä
+		long endTime=System.currentTimeMillis(); //è·å–ç»“æŸæ—¶é—´
 		
-		System.out.println("³ÌĞòÔËĞĞÊ±¼ä£º "+(endTime-startTime)+"ms");
+		System.out.println("ç¨‹åºè¿è¡Œæ—¶é—´ï¼š "+(endTime-startTime)+"ms");
 	}
 }

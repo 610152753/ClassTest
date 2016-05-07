@@ -29,10 +29,10 @@ public class CsvUtil
 			}
 			csvFile.createNewFile();
 
-			// GB2312使正确读取分隔符","
+			// GB2312浣挎纭鍙栧垎闅旂","
 			csvFileOutputStream = new BufferedWriter(new OutputStreamWriter(
 					new FileOutputStream(csvFile), "GB2312"), 1024);
-			// 写入文件头部
+			// 鍐欏叆鏂囦欢澶撮儴
 			for (Iterator propertyIterator = rowMapper.entrySet().iterator(); propertyIterator.hasNext();)
 			{
 				java.util.Map.Entry propertyEntry = (java.util.Map.Entry) propertyIterator.next();
@@ -44,7 +44,7 @@ public class CsvUtil
 			}
 			csvFileOutputStream.newLine();
 
-			// 写入文件内容
+			// 鍐欏叆鏂囦欢鍐呭
 			for (Iterator iterator = exportData.iterator(); iterator.hasNext();)
 			{
 				// Object row = (Object) iterator.next();

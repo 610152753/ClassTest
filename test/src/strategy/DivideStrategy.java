@@ -2,7 +2,7 @@ package strategy;
 
 /**
  * 
- * 2.编写策略类，该类实现了上面的公共接口
+ * 2.缂栧啓绛栫暐绫伙紝璇ョ被瀹炵幇浜嗕笂闈㈢殑鍏叡鎺ュ彛
  * 
  * @author JoePotter
  *

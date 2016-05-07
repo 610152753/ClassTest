@@ -53,13 +53,13 @@ class mydh extends DefaultHandler
 		
 		String namet = stack.peek();
 		
-		if("姓名".equals(namet))
+		if("濮撳悕".equals(namet))
 		{
 			name = new String(ch,start,length);
-		}if("性别".equals(namet)){
+		}if("鎬у埆".equals(namet)){
 			sex = new String(ch,start,length);
 		}
-		if("年龄".equals(namet))
+		if("骞撮緞".equals(namet))
 		{
 			age = new String(ch,start,length);
 		}
@@ -68,15 +68,15 @@ class mydh extends DefaultHandler
 	public void endElement(String uri, String localName, String qName) throws SAXException {
 		
 		stack.pop();
-		if("姓名".equals(qName))
+		if("濮撳悕".equals(qName))
 		{
 		System.out.println(qName + ":" + name);
 		}
-		if("性别".equals(qName))
+		if("鎬у埆".equals(qName))
 		{
 			System.out.println(qName + ":" + sex);
 		}
-		if("年龄".equals(qName))
+		if("骞撮緞".equals(qName))
 		{
 			System.out.println(qName + ":" + age);
 		}

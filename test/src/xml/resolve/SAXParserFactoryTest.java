@@ -13,11 +13,11 @@ public class SAXParserFactoryTest {
 	
 	public static void main(String[] args) throws Exception
 	{
-		//STEP 1:»ñµÃSAX·ÖÎöÆ÷¹¤³§ÊµÀı
+		//STEP 1:è·å¾—SAXåˆ†æå™¨å·¥å‚å®ä¾‹
 		SAXParserFactory sapxf = SAXParserFactory.newInstance();
-		//STEP 2:»ñµÃSAX·ÖÎöÆ÷
+		//STEP 2:è·å¾—SAXåˆ†æå™¨
 		SAXParser saxparser = sapxf.newSAXParser();
-		//STEP 3:¿ªÊ¼½âÎöxmlÎÄ¼ş
+		//STEP 3:å¼€å§‹è§£æxmlæ–‡ä»¶
 		saxparser.parse(new File("students.xml"),new myhandler());
 	}
 

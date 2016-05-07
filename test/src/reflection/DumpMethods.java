@@ -4,10 +4,10 @@ import java.lang.reflect.Method;
 
 /**
  * 
- * »ñÈ¡Ä³¸öÀà»òÕßÄ³¸ö¶ÔÏóËù¶ÔÓ¦µÄClass¶ÔÏóµÄ³£ÓÃµÄÈıÖÖ·½Ê½
- * 1.Ê¹ÓÃClassÀàµÄ¾²Ì¬·½·¨£ºforName:Class.forName("java.lang.String");
- * 2.Ê¹ÓÃÀàµÄ.classÓï·¨£ºString.class;
- * 3.Ê¹ÓÃ¶ÔÏóµÄgetClass()·½·¨:String s = "aa"; 
+ * è·å–æŸä¸ªç±»æˆ–è€…æŸä¸ªå¯¹è±¡æ‰€å¯¹åº”çš„Classå¯¹è±¡çš„å¸¸ç”¨çš„ä¸‰ç§æ–¹å¼
+ * 1.ä½¿ç”¨Classç±»çš„é™æ€æ–¹æ³•ï¼šforName:Class.forName("java.lang.String");
+ * 2.ä½¿ç”¨ç±»çš„.classè¯­æ³•ï¼šString.class;
+ * 3.ä½¿ç”¨å¯¹è±¡çš„getClass()æ–¹æ³•:String s = "aa"; 
  *   Class<?> class = s.getClass();
  * 
  * @author JoePotter
@@ -15,12 +15,12 @@ import java.lang.reflect.Method;
  */
 public class DumpMethods
 {
-	// ´ÓÃüÁîĞĞ½ÓÊÜÒ»¸ö×Ö·û´®(¸Ã×Ö·û´®ÊÇÄ³¸öÀàµÄÈ«Ãû)
-	// ´òÓ¡³ö¸ÃÀàÖĞµÄËùÓĞ·½·¨ÉêÃ÷
+	// ä»å‘½ä»¤è¡Œæ¥å—ä¸€ä¸ªå­—ç¬¦ä¸²(è¯¥å­—ç¬¦ä¸²æ˜¯æŸä¸ªç±»çš„å…¨å)
+	// æ‰“å°å‡ºè¯¥ç±»ä¸­çš„æ‰€æœ‰æ–¹æ³•ç”³æ˜
 	public static void main(String[] args) throws ClassNotFoundException
 	{
-		//Class ÀàÊÇjava·´ÉäµÄÈë¿Úµã
-		//»ñÈ¡ÀàµÄclass¶ÔÏó
+		//Class ç±»æ˜¯javaåå°„çš„å…¥å£ç‚¹
+		//è·å–ç±»çš„classå¯¹è±¡
 		
 //		Class<?> classType = Class.forName("java.lang.String"); 
 		Class<?> classType = Class.forName(args[0]); 

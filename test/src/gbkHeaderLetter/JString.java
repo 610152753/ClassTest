@@ -7,9 +7,9 @@ public class JString {
 	private static ArrayList pinyin = new ArrayList(395);
 
 	/**
-	 * ¸Ã·½·¨·µ»ØÒ»¸ö×Ö·û´®µÄÆ´Òô£¬¶ÔÓÚÒª×öÃô¸Ğ×Ö
-	 * ¼ì²éÊ±Ó¦¸ÃÒ»¸ö×ÖÒ»¸ö×ÖÀ´»ñÈ¡ÆäÆ´ÒôÒÔÃâÎŞ·¨
-	 * µÃÖªÃ¿¸ö×Ö¶ÔÓ¦µÄÆ´Òô¡£
+	 * è¯¥æ–¹æ³•è¿”å›ä¸€ä¸ªå­—ç¬¦ä¸²çš„æ‹¼éŸ³ï¼Œå¯¹äºè¦åšæ•æ„Ÿå­—
+	 * æ£€æŸ¥æ—¶åº”è¯¥ä¸€ä¸ªå­—ä¸€ä¸ªå­—æ¥è·å–å…¶æ‹¼éŸ³ä»¥å…æ— æ³•
+	 * å¾—çŸ¥æ¯ä¸ªå­—å¯¹åº”çš„æ‹¼éŸ³ã€‚
 	 * @param word
 	 * @return String
 	 */
@@ -20,7 +20,7 @@ public class JString {
 		return pinyin;
 	}
 	/**
-	 * ¸Ã·½·¨Í¨¹ıDBCSµÄ±àÂëÖµµ½¹şÏ£±íÖĞ²éÑ¯µÃµ½¶ÔÓ¦µÄÆ´Òô´®
+	 * è¯¥æ–¹æ³•é€šè¿‡DBCSçš„ç¼–ç å€¼åˆ°å“ˆå¸Œè¡¨ä¸­æŸ¥è¯¢å¾—åˆ°å¯¹åº”çš„æ‹¼éŸ³ä¸²
 	 * @param hz
 	 * @return String
 	 */
@@ -44,7 +44,7 @@ public class JString {
 	}
 	
 	/**
-	 * ¸Ã·½·¨·µ»ØÒ»¸ö×Ö·ûµÄDBCS±àÂëÖµ
+	 * è¯¥æ–¹æ³•è¿”å›ä¸€ä¸ªå­—ç¬¦çš„DBCSç¼–ç å€¼
 	 * @param cc
 	 * @return int
 	 */
@@ -456,7 +456,7 @@ public class JString {
 		pinyin.add(new PinyinCode("zuo", -10254));
 	}
 	/**
- 	* Æ´Òô´¦ÀíĞÅÏ¢
+ 	* æ‹¼éŸ³å¤„ç†ä¿¡æ¯
  	* @author liusoft
  	* created on 2002-12-19
  	*/
@@ -476,7 +476,7 @@ public class JString {
 	public static void main(String[] args)
 	{
 		  
-		System.out.println(getPinyin("ÄãÄãºÃÂğ"));
+		System.out.println(getPinyin("ä½ ä½ å¥½å—"));
 		
 	}
 }

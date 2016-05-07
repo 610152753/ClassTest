@@ -8,7 +8,7 @@ import java.util.List;
 
 public class DirTree {
 	
-	//¿ØÖÆÄ¿Â¼²ã´ÎµÄÍË¸ñ
+	//æ§åˆ¶ç›®å½•å±‚æ¬¡çš„é€€æ ¼
 	private String space = "";
 	
 	
@@ -30,7 +30,7 @@ public class DirTree {
 			    fileList.add(f);
 			}
 			
-			//ÎÄ¼şºÍÎÄ¼ş¼ĞÅÅĞòÎÄ¼ş¼ĞÓÅÏÈ£¬Í¬Ê±ÎªÎÄ¼ş»òÕßÎÄ¼ş¼Ğ°´×ÖµäË³Ğò
+			//æ–‡ä»¶å’Œæ–‡ä»¶å¤¹æ’åºæ–‡ä»¶å¤¹ä¼˜å…ˆï¼ŒåŒæ—¶ä¸ºæ–‡ä»¶æˆ–è€…æ–‡ä»¶å¤¹æŒ‰å­—å…¸é¡ºåº
 			Collections.sort(fileList, new Comparator<File>() {
 
 				public int compare(File o1, File o2) {
@@ -44,9 +44,9 @@ public class DirTree {
 			
 			for(File f : fileList)
 			{
-				space = space + "--------";   //¿ØÖÆÄ¿Â¼µÄ²ã´Î £¬Ã¿´ÎÉîÈëÒ»²ã
+				space = space + "--------";   //æ§åˆ¶ç›®å½•çš„å±‚æ¬¡ ï¼Œæ¯æ¬¡æ·±å…¥ä¸€å±‚
 				tree(f);
-				space = space.substring(0, space.length() - 8); //¿ØÖÆÄ¿Â¼µÄ²ã´Î £¬Ã¿´ÎÍË³öÒ»²ã
+				space = space.substring(0, space.length() - 8); //æ§åˆ¶ç›®å½•çš„å±‚æ¬¡ ï¼Œæ¯æ¬¡é€€å‡ºä¸€å±‚
 			}
 		}
 	}

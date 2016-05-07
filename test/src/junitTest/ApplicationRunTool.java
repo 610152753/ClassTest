@@ -5,8 +5,8 @@ import java.lang.reflect.Method;
 
 /**
  * 
- * ×Ô¼ºÊµÏÖ¼òµ¥µÄJunit¹¤¾ß
- * Ê¹ÓÃ×¢½âÀ´
+ * è‡ªå·±å®ç°ç®€å•çš„Junitå·¥å…·
+ * ä½¿ç”¨æ³¨è§£æ¥
  *
  */
 
@@ -15,13 +15,13 @@ public class ApplicationRunTool {
 //	public void run(String className) throws Exception
 	public Object run(Class<?> classType,Object obj[]) throws Exception
 	{
-		//»ñÈ¡ÀàµÄclass¶ÔÏó
+		//è·å–ç±»çš„classå¯¹è±¡
 //		Class<?> classType = Class.forName(className);
 		
-		//Éú²úÀàµÄÊµÀı¶ÔÏó
+		//ç”Ÿäº§ç±»çš„å®ä¾‹å¯¹è±¡
 		Object invokeTester = classType.newInstance();
 		
-		//»ñÈ¡ÉùÃ÷µÄ·½·¨
+		//è·å–å£°æ˜çš„æ–¹æ³•
 		Method[] methods = classType.getDeclaredMethods();
 		
 		for(Method  mthd: methods)
@@ -31,9 +31,9 @@ public class ApplicationRunTool {
 //					&& "void".equals(mthd.getReturnType().toString())) 
 					)
 			{
-				//µ÷ÓÃÕâ¸ö¶ÔÏóµÄ·½·¨
+				//è°ƒç”¨è¿™ä¸ªå¯¹è±¡çš„æ–¹æ³•
 				try {
-					mthd.setAccessible(true);   //½ûÖ¹javaµÄ·ÃÎÊ¿ØÖÆ¼ì²é
+					mthd.setAccessible(true);   //ç¦æ­¢javaçš„è®¿é—®æ§åˆ¶æ£€æŸ¥
 					
 					if (mthd.getParameterCount() > 0) {
 						Object ret = (Integer) mthd.invoke(invokeTester, obj);

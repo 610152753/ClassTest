@@ -23,7 +23,7 @@ public class MycomplexLayout
 		frame.add(b1,BorderLayout.WEST);
 		frame.add(b2,BorderLayout.CENTER);
 		
-		panel = new Panel();  //Ĭ��ΪFlowLayout
+		panel = new Panel();  //默认为FlowLayout
 		
 		b3 = new Button("b3");
 		b4 = new Button("b4");

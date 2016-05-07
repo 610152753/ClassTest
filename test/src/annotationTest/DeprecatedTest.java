@@ -3,14 +3,14 @@ package annotationTest;
 import java.util.Date;
 
 /**
- * Deprecated×¢½â±íÊ¾·½·¨ÊÇ²»½¨Òé±»Ê¹ÓÃµÄ¡£ 
+ * Deprecatedæ³¨è§£è¡¨ç¤ºæ–¹æ³•æ˜¯ä¸å»ºè®®è¢«ä½¿ç”¨çš„ã€‚ 
  *
  */
 public class DeprecatedTest
 {
 	
 	/**
-	 * ×Ô¶¨ÒåµÄannotation
+	 * ï¿½Ô¶ï¿½ï¿½ï¿½ï¿½annotation
 	 */
 	@Deprecated
 	public void doSomething()

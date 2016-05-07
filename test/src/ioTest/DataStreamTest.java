@@ -26,7 +26,7 @@ public class DataStreamTest {
 		
 		dos.close();
 		
-		//¶ÁĞ´µÄË³ĞòÒª±£³ÖÒ»ÖÂ
+		//è¯»å†™çš„é¡ºåºè¦ä¿æŒä¸€è‡´
 		DataInputStream dis = new DataInputStream(new BufferedInputStream(new FileInputStream("data.txt")));
 		
 		System.out.println(dis.readByte());

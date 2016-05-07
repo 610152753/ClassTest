@@ -28,7 +28,7 @@ public class ProcessData
 
 			ConfigGetDb getsql = new ConfigGetDb(currentPath + File.separator + "selectSql.ddl");
 			
-			String strSql = getsql.execSql; // 将sql中将;去掉
+			String strSql = getsql.execSql; // 灏唖ql涓皢;鍘绘帀
 
 			ResultSet rs = ComJdbc.execQuery(strSql);
 

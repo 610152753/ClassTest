@@ -39,7 +39,7 @@ class MyByteArrayInputStream extends InputStream
 	protected int prt = 0;
 	
      /**
-     *´ø²ÎÊıµÄ¹¹Ôì·½·¨ 
+     *å¸¦å‚æ•°çš„æ„é€ æ–¹æ³• 
      * @param b
      */
 	public MyByteArrayInputStream(byte[] b) {

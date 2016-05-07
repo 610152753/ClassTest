@@ -5,9 +5,9 @@ import java.lang.reflect.Method;
 
 /**
  *
- * ¸Ã´úÀíµÄÄÚ²¿ÊôÐÔÊÇObjectÀàÐÍ£¬Êµ¼ÊÊ¹ÓÃµÄÊ±ºòÍ¨¹ý¹¹Ôì·½·¨´«µÝÒ»¸ö¶ÔÏó£¬
- * ´ËÍâ£¬¸ÃÀà»¹ÊµÏÖÁËIvoke·½·¨£¬¸Ã·½·¨ÖÐµÄmethod.invokeÆäÊµ¾ÍÊÇµ÷ÓÃ±»´úÀí¶ÔÏóµÄÖ´ÐÐµÄ·½·¨£¬·½·¨²ÎÊýÊÇobj
- * ±íÊ¾¸Ã·½·¨´ÓÊôÓÚobj,Í¨¹ý¶¯Ì¬´úÀíÀà£¬ÎÒÃÇ¿ÉÒÔÔÚÖ´ÐÐÆäÕæÊµ¶ÔÏóµÄÇ°ºó¼ÓÈë×Ô¼ºµÄÒ»Ð©¶îÍâµÄ´úÂë¡£
+ * è¯¥ä»£ç†çš„å†…éƒ¨å±žæ€§æ˜¯Objectç±»åž‹ï¼Œå®žé™…ä½¿ç”¨çš„æ—¶å€™é€šè¿‡æž„é€ æ–¹æ³•ä¼ é€’ä¸€ä¸ªå¯¹è±¡ï¼Œ
+ * æ­¤å¤–ï¼Œè¯¥ç±»è¿˜å®žçŽ°äº†Ivokeæ–¹æ³•ï¼Œè¯¥æ–¹æ³•ä¸­çš„method.invokeå…¶å®žå°±æ˜¯è°ƒç”¨è¢«ä»£ç†å¯¹è±¡çš„æ‰§è¡Œçš„æ–¹æ³•ï¼Œæ–¹æ³•å‚æ•°æ˜¯obj
+ * è¡¨ç¤ºè¯¥æ–¹æ³•ä»Žå±žäºŽobj,é€šè¿‡åŠ¨æ€ä»£ç†ç±»ï¼Œæˆ‘ä»¬å¯ä»¥åœ¨æ‰§è¡Œå…¶çœŸå®žå¯¹è±¡çš„å‰åŽåŠ å…¥è‡ªå·±çš„ä¸€äº›é¢å¤–çš„ä»£ç ã€‚
  *
  */
 
@@ -25,7 +25,7 @@ public class ProxyDynamicSubject implements InvocationHandler
 	public Object invoke(Object proxy, Method method, Object[] args)
 			throws Throwable
 	{
-		method.invoke(obj, args);  //ÀûÓÃ·´Éäµ÷ÓÃÐèÒªµ÷ÓÃµÄ·½·¨
+		method.invoke(obj, args);  //åˆ©ç”¨åå°„è°ƒç”¨éœ€è¦è°ƒç”¨çš„æ–¹æ³•
 		return null;
 	}
 

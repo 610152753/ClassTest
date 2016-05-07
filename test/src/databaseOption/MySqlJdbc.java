@@ -6,21 +6,21 @@ public class MySqlJdbc
 {
 	public static void main(String[] args)
 	{
-		// Çı¶¯³ÌĞòÃû
+		// é©±åŠ¨ç¨‹åºå
 		String driver = "com.mysql.jdbc.Driver";
-		// URLÖ¸ÏòÒª·ÃÎÊµÄÊı¾İ¿âÃûzjwdb_173271
+		// URLæŒ‡å‘è¦è®¿é—®çš„æ•°æ®åº“åzjwdb_173271
 		String url = "jdbc:mysql://182.18.22.37:3306/Ak610152753";
-		// MySQLÅäÖÃÊ±ÓÃ»§Ãû
+		// MySQLé…ç½®æ—¶ç”¨æˆ·å
 		String user = "Ak610152753";
-		// JavaÁ¬½ÓMySQLÅäÖÃÊ±µÄÃÜÂë
+		// Javaè¿æ¥MySQLé…ç½®æ—¶çš„å¯†ç 
 		String password = "Ak610152753";
 
 		try
 		{
-			// ¼ÓÔØÇı¶¯³ÌĞò
+			// åŠ è½½é©±åŠ¨ç¨‹åº
 			Class.forName(driver);
 
-			// Á¬½ÓÊı¾İ¿â
+			// è¿æ¥æ•°æ®åº“
 
 			Connection conn = DriverManager.getConnection(url, user, password);
 
@@ -28,11 +28,11 @@ public class MySqlJdbc
 
 				System.out.println("Succeeded connecting to the Database!");
 
-			// statemet ÓÃÀ´Ö´ĞĞSQLÓï¾ä
+			// statemet ç”¨æ¥æ‰§è¡ŒSQLè¯­å¥
 
 			Statement statement = conn.createStatement();
 
-			// ÒªÖ´ĞĞµÄSQLÓï¾ä
+			// è¦æ‰§è¡Œçš„SQLè¯­å¥
 
 			String sql = "select * from student";
 
@@ -40,11 +40,11 @@ public class MySqlJdbc
 
 			System.out.println("-----------------");
 
-			System.out.println("Ö´ĞĞ½á¹ûÈçÏÂËùÊ¾:");
+			System.out.println("æ‰§è¡Œç»“æœå¦‚ä¸‹æ‰€ç¤º:");
 
 			System.out.println("-----------------");
 
-			System.out.println(" Ñ§ºÅ" + "\t" + " ĞÕÃû");
+			System.out.println(" å­¦å·" + "\t" + " å§“å");
 
 			System.out.println("-----------------");
 
@@ -52,17 +52,17 @@ public class MySqlJdbc
 
 			while (rs.next())
 			{
-				// Ñ¡ÔñsnameÕâÁĞÊı¾İ
+				// é€‰æ‹©snameè¿™åˆ—æ•°æ®
 
 				name = rs.getString("sname");
 
-				// Ê×ÏÈÊ¹ÓÃISO-8859-1×Ö·û¼¯½«name½âÂëÎª×Ö½ÚĞòÁĞ²¢½«½á¹û´æ´¢ĞÂµÄ×Ö½ÚÊı×éÖĞ¡£
+				// é¦–å…ˆä½¿ç”¨ISO-8859-1å­—ç¬¦é›†å°†nameè§£ç ä¸ºå­—èŠ‚åºåˆ—å¹¶å°†ç»“æœå­˜å‚¨æ–°çš„å­—èŠ‚æ•°ç»„ä¸­ã€‚
 
-				// È»ºóÊ¹ÓÃGB2312×Ö·û¼¯½âÂëÖ¸¶¨µÄ×Ö½ÚÊı×é
+				// ç„¶åä½¿ç”¨GB2312å­—ç¬¦é›†è§£ç æŒ‡å®šçš„å­—èŠ‚æ•°ç»„
 
 				name = new String(name.getBytes("ISO-8859-1"), "GB2312");
 
-				// Êä³ö½á¹û
+				// è¾“å‡ºç»“æœ
 
 				System.out.println(rs.getString("sno") + "\t" + name);
 			}

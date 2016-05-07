@@ -7,23 +7,23 @@ import java.lang.reflect.Method;
 
 /**
  * 
- * ÈôÏëÍ¨¹ıÀàµÄ²»´ø²ÎÊıµÄ¹¹Ôì·½·¨À´Éú³É¶ÔÏó£¬ÎÒÃÇÓĞÁ½ÖÖ·½Ê½
- * 1.ÏÈ»ñÈ¡Class¶ÔÏó£¬È»ºóÍ¨¹ı¸ÃClass¶ÔÏóµÄnewInstance()·½·¨Ö±½ÓÉú²ú¼´¿É
+ * è‹¥æƒ³é€šè¿‡ç±»çš„ä¸å¸¦å‚æ•°çš„æ„é€ æ–¹æ³•æ¥ç”Ÿæˆå¯¹è±¡ï¼Œæˆ‘ä»¬æœ‰ä¸¤ç§æ–¹å¼
+ * 1.å…ˆè·å–Classå¯¹è±¡ï¼Œç„¶åé€šè¿‡è¯¥Classå¯¹è±¡çš„newInstance()æ–¹æ³•ç›´æ¥ç”Ÿäº§å³å¯
  * 
- * 2.ÏÈ»ñÈ¡Class¶ÔÏó£¬È»ºóÍ¨¹ı¸Ã¶ÔÏó»ñÈ¡¶ÔÓ¦µÄConstructor¶ÔÏó£¬ÔÚÍ¨¹ı¸ÃConstructor¶ÔÏó
- * µÄnewInstance()·½·¨Éú²ú
+ * 2.å…ˆè·å–Classå¯¹è±¡ï¼Œç„¶åé€šè¿‡è¯¥å¯¹è±¡è·å–å¯¹åº”çš„Constructorå¯¹è±¡ï¼Œåœ¨é€šè¿‡è¯¥Constructorå¯¹è±¡
+ * çš„newInstance()æ–¹æ³•ç”Ÿäº§
  * 
- * ÈôÏëÍ¨¹ıÀàµÄ´ø²ÎÊıµÄ¹¹Ôì·½·¨À´Éú³É¶ÔÏó£¬¼ûÏÂÃæ
+ * è‹¥æƒ³é€šè¿‡ç±»çš„å¸¦å‚æ•°çš„æ„é€ æ–¹æ³•æ¥ç”Ÿæˆå¯¹è±¡ï¼Œè§ä¸‹é¢
  * 
- * ÏÈ»ñÈ¡Class¶ÔÏó£¬È»ºóÍ¨¹ı¸Ã¶ÔÏó»ñÈ¡¶ÔÓ¦µÄConstructor(new Class[]{Long.class,String.class})¶ÔÏó£¬ÔÙÍ¨¹ı¸ÃConstructor¶ÔÏó
- * µÄnewInstance(new Object[]{ 2,"hel"})·½·¨Éú²ú
+ * å…ˆè·å–Classå¯¹è±¡ï¼Œç„¶åé€šè¿‡è¯¥å¯¹è±¡è·å–å¯¹åº”çš„Constructor(new Class[]{Long.class,String.class})å¯¹è±¡ï¼Œå†é€šè¿‡è¯¥Constructorå¯¹è±¡
+ * çš„newInstance(new Object[]{ 2,"hel"})æ–¹æ³•ç”Ÿäº§
  * 
  * @author JoePotter
  *
  */
 public class ReflecterTest
 {
-	//¸Ã·½·¨ÊµÏÖ¶ÔCustomer¶ÔÏóµÄ¿½±´²Ù×÷
+	//è¯¥æ–¹æ³•å®ç°å¯¹Customerå¯¹è±¡çš„æ‹·è´æ“ä½œ
 	
 	public Object copy(Object object) throws Exception
 	{
@@ -40,7 +40,7 @@ public class ReflecterTest
 		
 		Object obj = cons.newInstance(new Object[]{});
 		
-		//ÒÔÉÏÁ½ĞĞ´úÂëµÈ¼ÛÓëÏÂÃæÒ»ĞĞ
+		//ä»¥ä¸Šä¸¤è¡Œä»£ç ç­‰ä»·ä¸ä¸‹é¢ä¸€è¡Œ
 		
 		Object obj2 = classType.newInstance();
 		
@@ -51,9 +51,9 @@ public class ReflecterTest
 		System.out.println(obj2);
 		
 		
-		System.out.println("---------------´ø²ÎÊı");
+		System.out.println("---------------å¸¦å‚æ•°");
 		
-		//´ø²ÎÊıµÄ
+		//å¸¦å‚æ•°çš„
 		
 		Constructor cons1 = classType.getConstructor(new Class[]{Long.class,String.class});
 		
@@ -88,7 +88,7 @@ public class ReflecterTest
 	{
 		
 	    ReflecterTest reflecterTest = new ReflecterTest();
-		System.out.println("==========µÚÒ»´Îµ÷ÓÃ===============");
+		System.out.println("==========ç¬¬ä¸€æ¬¡è°ƒç”¨===============");
 		Object ob1 =  reflecterTest.copy(new Customer());
 	
 		
@@ -97,7 +97,7 @@ public class ReflecterTest
 		System.out.println(((Customer)ob1).getName());
 	
 	
-		System.out.println("=============µÚ¶ş´Îµ÷ÓÃ==============");
+		System.out.println("=============ç¬¬äºŒæ¬¡è°ƒç”¨==============");
 		
 		
 		Customer cus = new Customer(Long.parseLong("10"),"dddd");

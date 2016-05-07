@@ -6,10 +6,10 @@ package exceptionTest;
  * at exceptionTest.ExceptionTest2.main(ExceptionTest2.java:9)
  * 
  * 
- * NullPointerException�ǿ�ָ���쳣�����ָ��쳣��ԭ������ĳ������Ϊnull��
- * ����ȴ����������ĳ����������ʱ�ͻ���ָ��쳣��
+ * NullPointerException是空指针异常，出现该异常的原因在于某个引用为null，
+ * 但是却调用了它的某个方法。这时就会出现该异常。
  * 
- * ʵ�ʿ����кܳ������쳣��
+ * 实际开发中很常见的异常。
  * 
  *
  */

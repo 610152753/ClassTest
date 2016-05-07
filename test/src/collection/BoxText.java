@@ -12,7 +12,7 @@ public class BoxText
 		Collection<Integer> c = new ArrayList<Integer>();
 	
 		c.add(a + 2); 
-		c.add(4); //½«intÀàĞÍµÄ4×ª»»ÎªIntegerÀàĞÍ²¢·Åµ½¼¯ºÏµ±ÖĞ
+		c.add(4); //å°†intç±»å‹çš„4è½¬æ¢ä¸ºIntegerç±»å‹å¹¶æ”¾åˆ°é›†åˆå½“ä¸­
 		
 		for(int element: c)
 		{

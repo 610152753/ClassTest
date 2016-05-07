@@ -1,7 +1,7 @@
 package enumeration.Test;
 
 /**
- * 导入Common类中的静态成员变量和方法
+ * 瀵煎叆Common绫讳腑鐨勯潤鎬佹垚鍛樺彉閲忓拰鏂规硶
  */
 import static common.Common.AGE;
 import static common.Common.output;

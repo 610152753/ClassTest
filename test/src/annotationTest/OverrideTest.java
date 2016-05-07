@@ -2,7 +2,7 @@ package annotationTest;
 
 /**
  * 
- *Override ×¢½â±íÊ¾×ÓÀàÒªÖØĞ´(override)¸¸ÀàµÄ ¶ÔÓ¦µÄ·½·¨
+ *Override æ³¨è§£è¡¨ç¤ºå­ç±»è¦é‡å†™(override)çˆ¶ç±»çš„ å¯¹åº”çš„æ–¹æ³•
  */
 public class OverrideTest
 {

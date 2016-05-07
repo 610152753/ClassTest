@@ -6,7 +6,7 @@ public class RandomAccessFile1 {
 	
 	public static void main(String[] args) throws Exception {
 		
-		Person p = new Person(10,"Joe§…§¶§∑§∆",170.1);
+		Person p = new Person(10,"Joe„Å©„ÅÜ„Åó„Å¶",170.1);
 		
 		RandomAccessFile raf = new RandomAccessFile("RandomAccessFile.txt", "rw");
 		

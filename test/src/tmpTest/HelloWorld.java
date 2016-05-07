@@ -4,8 +4,8 @@ public class HelloWorld
 {
 	public static void main(String[] args)
 	{
-		char c = 'ÖÐ';
-		char g = '¹ú';
+		char c = 'ä¸­';
+		char g = 'å›½';
 		
 		String f = null;
 		

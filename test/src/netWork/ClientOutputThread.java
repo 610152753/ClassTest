@@ -28,13 +28,13 @@ public class ClientOutputThread extends Thread
 			while(true)
 			{
 
-				//ÓÉSocket¶ÔÏóµÃµ½Êä³öÁ÷£¬²¢¹¹ÔìPrintWriter¶ÔÏó
+				//ç”±Socketå¯¹è±¡å¾—åˆ°è¾“å‡ºæµï¼Œå¹¶æ„é€ PrintWriterå¯¹è±¡
 				PrintWriter pw = new PrintWriter(os);
 				
-				//ÓÉÏµÍ³±ê×¼ÊäÈëÉè±¸¹¹ÔìBufferedReader¶ÔÏó
+				//ç”±ç³»ç»Ÿæ ‡å‡†è¾“å…¥è®¾å¤‡æ„é€ BufferedReaderå¯¹è±¡
 				BufferedReader buffer = new BufferedReader(new InputStreamReader(System.in));
 
-				//´ÓÏµÍ³±ê×¼ÊäÈë¶ÁÈëÒ»×Ö·û´®
+				//ä»ç³»ç»Ÿæ ‡å‡†è¾“å…¥è¯»å…¥ä¸€å­—ç¬¦ä¸²
 				String str = buffer.readLine();
 				
 				if("bye".equals(str))
@@ -42,10 +42,10 @@ public class ClientOutputThread extends Thread
 					System.out.println("bye========");
 					System.exit(0);
 				}
-				//½«´ÓÏµÍ³±ê×¼ÊäÈë¶ÁÈëµÄ×Ö·û´®Êä³öµ½Server
+				//å°†ä»ç³»ç»Ÿæ ‡å‡†è¾“å…¥è¯»å…¥çš„å­—ç¬¦ä¸²è¾“å‡ºåˆ°Server
 				pw.println(str);
 				
-				//Ë¢ĞÂÊä³öÁ÷£¬Ê¹ServerÂíÉÏÊÕµ½¸Ã×Ö·û´®
+				//åˆ·æ–°è¾“å‡ºæµï¼Œä½¿Serveré©¬ä¸Šæ”¶åˆ°è¯¥å­—ç¬¦ä¸²
 				pw.flush();
 
 			}

@@ -4,8 +4,8 @@ package gbkHeaderLetter;
  */
 
 /**
- * È¡µÃºº×ÖÆ´ÒôÂë.
- * Ö§³ÖGBK´ó×Ö·û¼¯.
+ * å–å¾—æ±‰å­—æ‹¼éŸ³ç .
+ * æ”¯æŒGBKå¤§å­—ç¬¦é›†.
  * @author Zhao Honghui
  * @version 1.0
  */
@@ -443,19 +443,19 @@ public class GgkCodePage936HeadLetter{
 
 
 	/**
-	 * »ñÈ¡GBK×ÖµÄÆ´ÒôµÄÊ××ÖÄ¸
-	 * ÓÉÓÚÊý¾Ý½Ï´ó,ÍêÕûµÄGBK±àÂë±í°´GBK¹æ·¶·Ö³É3²¿·Ö
-	 * GBK/2ÎªÓëGB2312¼æÈÝµÄ¹ú±êºº×Ö²¿·Ö£¬GBK/3ºÍGBK/4ÎªÀ©Õ¹ºº×Ö²¿·Ö
-	 * Ã¿Ò»²¿·Ö¶¼ÓÐ×Ô¼ºµÄµØÖ·¼ÆËã¹«Ê½
-	 * ÈôÊäÈëÊÇacsiiÔò·µ»ØÍ¬ÑùµÄacsii
-	 * ÈôÊäÈëÊÇÖÐÎÄ×Ö·ûÔò·µ»ØÆ´ÒôµÄÊ××ÖÄ¸
-	 * ÈôÊäÈëÊÇÖÐÎÄ×Ö·ûµ«ÊÇ¸Ã×Ö·û²»ÖªµÀÈçºÎ·¢Òô£¬Ôò·µ»Ø¿Õ×Ö·û
+	 * èŽ·å–GBKå­—çš„æ‹¼éŸ³çš„é¦–å­—æ¯
+	 * ç”±äºŽæ•°æ®è¾ƒå¤§,å®Œæ•´çš„GBKç¼–ç è¡¨æŒ‰GBKè§„èŒƒåˆ†æˆ3éƒ¨åˆ†
+	 * GBK/2ä¸ºä¸ŽGB2312å…¼å®¹çš„å›½æ ‡æ±‰å­—éƒ¨åˆ†ï¼ŒGBK/3å’ŒGBK/4ä¸ºæ‰©å±•æ±‰å­—éƒ¨åˆ†
+	 * æ¯ä¸€éƒ¨åˆ†éƒ½æœ‰è‡ªå·±çš„åœ°å€è®¡ç®—å…¬å¼
+	 * è‹¥è¾“å…¥æ˜¯acsiiåˆ™è¿”å›žåŒæ ·çš„acsii
+	 * è‹¥è¾“å…¥æ˜¯ä¸­æ–‡å­—ç¬¦åˆ™è¿”å›žæ‹¼éŸ³çš„é¦–å­—æ¯
+	 * è‹¥è¾“å…¥æ˜¯ä¸­æ–‡å­—ç¬¦ä½†æ˜¯è¯¥å­—ç¬¦ä¸çŸ¥é“å¦‚ä½•å‘éŸ³ï¼Œåˆ™è¿”å›žç©ºå­—ç¬¦
 	 * @param hzString
 	 * @return String
 	 */
 	public static String getGBKpy(String hzString) {
 		/*
-		 * Ð§ÂÊ:´¦Àí´ó×Ö·û´®(×Ö·û´®ÓÐ132055¸öbyte,¼´70577¸öchar)1000´Î£¬ÏûºÄÊ±¼ä44.474S.
+		 * æ•ˆçŽ‡:å¤„ç†å¤§å­—ç¬¦ä¸²(å­—ç¬¦ä¸²æœ‰132055ä¸ªbyte,å³70577ä¸ªchar)1000æ¬¡ï¼Œæ¶ˆè€—æ—¶é—´44.474S.
 		 */
 		if (hzString == null || hzString.length() == 0)
 			return "";
@@ -467,18 +467,18 @@ public class GgkCodePage936HeadLetter{
 		byte eB[] = hzString.getBytes();
 		len = eB.length;
 
-		//¿ªÊ¼¼ÆËã
+		//å¼€å§‹è®¡ç®—
 		pyi = 0;
 		while (pyi < len) {
 			ch1 = (char) eB[pyi];
 			pyi = pyi + 1;
 			ch1code = ch1;
 			if (ch1code > 0 && ch1code < 129) {
-				//ÆÕÍ¨µÄacsii
+				//æ™®é€šçš„acsii
 				pyBuffer.append(ch1);
 				continue;
 			} else {
-				//GBK×Ö·û
+				//GBKå­—ç¬¦
 				ch1 = (char) (256 + (int) ch1);
 				if (eB[pyi] < 0) {
 					ch2 = (char) (256 + (int) eB[pyi]);
@@ -492,22 +492,22 @@ public class GgkCodePage936HeadLetter{
 			ch1code = ch1;
 			ch2code = ch2;
 			if (ch1code <= 254 && ch1code >= 170) {
-				//ÓÅÏÈ´¦ÀíGB-2312ºº×Ö.
+				//ä¼˜å…ˆå¤„ç†GB-2312æ±‰å­—.
 				if (ch2code > 160) {
-					//²éÕÒGB-2312
+					//æŸ¥æ‰¾GB-2312
 					no = (ch1code - 176) * 94 + (ch2code - 160);
 					pyBuffer.append(GB_2312.charAt(no - 1));
 				} else {
-					//²éÕÒGBK_4
+					//æŸ¥æ‰¾GBK_4
 					no = (ch1code - 170) * 97 + (ch2code - 63);
 					pyBuffer.append(GBK_4.charAt(no - 1));
 				}
 			}else if (ch1code <= 160 && ch1code >= 129) {
-				//²éÕÒGBK_3
+				//æŸ¥æ‰¾GBK_3
 				no = (ch1code - 129) * 191 + (ch2code - 63);
 				pyBuffer.append(GBK_3.charAt(no - 1));
 			} else {
-				//²»ÊÇGBKºº×Ö
+				//ä¸æ˜¯GBKæ±‰å­—
 				continue;
 			}
 		}

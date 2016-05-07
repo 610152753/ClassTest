@@ -19,7 +19,7 @@ public class MyFlow
 		b3 = new Button("B3");
 		b4 = new Button("B4");
 		
-		frame.setLayout(new FlowLayout());  //使用FlowLayout替换默认的BorderLayout
+		frame.setLayout(new FlowLayout());  //浣跨敤FlowLayout鏇挎崲榛樿鐨凚orderLayout
 //		frame.pack();
 		
 		frame.setSize(200,200);

@@ -3,13 +3,13 @@ package enumeration.Test;
 
 /**
  * 
- * ö������ʵ���Ͼ����ڶ���һ�����ֻ�����ܶ�ϸ���ɱ�������������ˡ�
- * ������ĳ�̶ֳ��ϣ�enum�ؼ��ֵ����þ���class��interface��
+ * 枚举类型实质上就是在定义一个类别，只不过很多细节由编译器帮您完成了。
+ * 所以在某种程度上，enum关键字的作用就像class或interface。
  * 
- * ö��(Enum):�����������ÿ��ö�����Ͷ��̳���java.lang.Enum�࣬ö��
- * �е�ÿ����ԱĬ�϶���public static final�ġ�
+ * 枚举(Enum):我们所定义的每个枚举类型都继承自java.lang.Enum类，枚举
+ * 中的每个成员默认都是public static final的。
  * 
- * ÿ��ö�ٵĳ�Ա�����������ö�����͵�һ��ʵ��(Instance)
+ * 每个枚举的成员就是您定义的枚举类型的一个实例(Instance)
  * 
  * @author JoePotter
  *

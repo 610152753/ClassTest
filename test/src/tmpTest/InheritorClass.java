@@ -24,7 +24,7 @@ public class InheritorClass
 class Inherited extends InheritorClass
 {
     
-	//Ĭ�ϼ̳в��������Ĺ��췽�����������Ĺ��췽�����в������˴��������¶��幹�췽��
+	//默认继承不带参数的构造方法，如果父类的构造方法带有参数，此处必须重新定义构造方法
 	
 	
 	

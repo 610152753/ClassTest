@@ -63,10 +63,10 @@ public class DomRecursionTest {
         	 short nodetype = nl.item(i).getNodeType();
         	 if(nodetype == Node.ELEMENT_NODE)
         	 {
-        		 //递归入口
+        		 //閫掑綊鍏ュ彛
         		 recursionElement((Element)nl.item(i));
         	 }
-        	 //递归退出口
+        	 //閫掑綊閫�鍑哄彛
         	 if(nodetype == Node.TEXT_NODE)
         	 {
         		 System.out.print(nl.item(i).getNodeValue());

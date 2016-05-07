@@ -1,15 +1,14 @@
 package generics;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
 
 /**
- * ÔÚ¶¨Òå·ºÐÍÀàÐÍÊ±£¬Ô¤Éè¿ÉÒÔÊ¹ÓÃÈÎºÎµÄÀàÐÍÊµÀý»¯·ºÐÍÖÐµÄÀàÐÍ£¬
- * µ«ÊÇÈç¹ûÏëÒªÏÞÖÆÊ¹ÓÃ·ºÐÍÁÐ±ðÊ±£¬Ö»ÄÜÓÃÄ³¸öÌØ¶¨ÀàÐÍ
- * »òÕßÊÇÆä×ÓÀàÐÍ²ÅÄÜÊµÀý»¯¸ÃÀàÐÍÊ±£¬¿ÉÒÔÔÚ¶¨ÒåÀàÐÍÊ±£¬
- * Ê¹ÓÃextends¹Ø¼ü×ÖÖ¸¶¨Õâ¸ö½Ó¿Ú±ØÐë¼¯³ÉÄ³¸öÀà£¬»òÕßÊµÏÖÄ³¸ö½Ó¿Ú
+ * åœ¨å®šä¹‰æ³›åž‹ç±»åž‹æ—¶ï¼Œé¢„è®¾å¯ä»¥ä½¿ç”¨ä»»ä½•çš„ç±»åž‹å®žä¾‹åŒ–æ³›åž‹ä¸­çš„ç±»åž‹ï¼Œ
+ * ä½†æ˜¯å¦‚æžœæƒ³è¦é™åˆ¶ä½¿ç”¨æ³›åž‹åˆ—åˆ«æ—¶ï¼Œåªèƒ½ç”¨æŸä¸ªç‰¹å®šç±»åž‹
+ * æˆ–è€…æ˜¯å…¶å­ç±»åž‹æ‰èƒ½å®žä¾‹åŒ–è¯¥ç±»åž‹æ—¶ï¼Œå¯ä»¥åœ¨å®šä¹‰ç±»åž‹æ—¶ï¼Œ
+ * ä½¿ç”¨extendså…³é”®å­—æŒ‡å®šè¿™ä¸ªæŽ¥å£å¿…é¡»é›†æˆæŸä¸ªç±»ï¼Œæˆ–è€…å®žçŽ°æŸä¸ªæŽ¥å£
  * @author JoePotter
  *
  * @param <T>

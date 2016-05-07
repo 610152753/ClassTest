@@ -10,7 +10,7 @@ import java.io.OutputStreamWriter;
 
 /**
  * 
- *字符流的操作文件
+ *瀛楃娴佺殑鎿嶄綔鏂囦欢
  * 
  * @author Joe
  *
