@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="姓名" type="xs:string"/>
+	<xs:element name="性别">
+	     <xs:simpleType>
+		   <xs:restriction base="xs:string">
+		        <xs:enumeration value="男"/>
+		        <xs:enumeration value="女"/>		   
+		   </xs:restriction>
+		 </xs:simpleType>
+	</xs:element>
+	<xs:element name="年龄">
+	    <xs:simpleType>
+			<xs:restriction base="xs:integer">
+				<xs:minInclusive value="0"/>
+				<xs:maxInclusive value="200"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:complexType name="mytype">
+		<xs:sequence>
+			<xs:element ref="姓名"/>
+			<xs:element ref="性别"/>
+			<xs:element ref="年龄"/>
+		</xs:sequence>
+		<xs:attribute name="学号" type="xs:integer" use="required"/>
+	</xs:complexType>
+	
+	<xs:element name="学生" type="mytype"/>
+	
+	<xs:complexType name="stmytype">
+		<xs:sequence minOccurs="1" maxOccurs="unbounded">
+			<xs:element ref="学生"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="学生手册" type="stmytype"/>
+</xs:schema>

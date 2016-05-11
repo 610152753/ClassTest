@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<choiceTest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="sequence_minOccurs_maxOccurs_complexType.xsd">
+	
+	<hello/>
+	<world>1</world>
+	
+	<hello/>
+	<world>2</world>
+	
+	<hello/>
+	<world>3</world>
+	
+	
+</choiceTest>

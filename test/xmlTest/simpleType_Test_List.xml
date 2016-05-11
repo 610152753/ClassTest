@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	<xs:simpleType name="mylisttype">
+		<xs:list itemType="xs:integer"/>
+	</xs:simpleType>
+
+   List 的意思是元素的值是List 并且是integer类型
+ -->
+<hello xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="List_SimpleType_Test.xsd">
+1 2 3
+</hello>

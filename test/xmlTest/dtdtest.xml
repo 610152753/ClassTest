@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE poem [
+<!-- ","表示按照顺序  !-->
+<!ELEMENT poem (author+,title*,content?,sender)>
+<!-- 定义实体!-->
+<!ELEMENT author (#PCDATA)>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT content (#PCDATA)>
+<!ELEMENT sender (#PCDATA)>
+<!--<!ATTLIST author name CDATA #REQUIRED> !-->
+<!-- ID属性 属性值唯一!-->
+<!--<!ATTLIST author name ID #REQUIRED> !-->
+
+<!--
+    #REQUIRED 表示:元素的所有实例都必须有该属性的值
+    #IMPLIED 表示：元素的实例中可以忽略该元素
+    #FIXED :元素实例中该属性的值必须为指定的固定的值
+
+!-->
+
+<!ATTLIST author sex (man|woman) #REQUIRED>
+<!--<!ATTLIST sender company CDATA #FIXED "Microsoft" > !-->
+
+<!ATTLIST sender company CDATA "Microsoft" >
+
+
+]>
+
+<poem>
+   <!-- <author name="author1">王维</author> !-->
+   <!-- <author name="author2">王维</author> !-->
+
+   <author sex="man">王维</author>
+   <author sex="woman">王华</author>
+   
+   <title>鹿柴</title>
+   <title>鹿柴</title>
+   <title>鹿柴</title>
+   
+   
+  <content>空山不见人，但闻人语声.
+           返景入深林，复照青苔上.
+  </content>
+  
+  <sender>aa</sender>
+
+
+</poem>

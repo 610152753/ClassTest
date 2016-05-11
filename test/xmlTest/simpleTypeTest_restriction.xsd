@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+
+ <xs:simpleType name="mysimpleType">
+		<xs:restriction base="xs:int">
+		    <!--  使用了这个类型的元素的值的取值其中任意一个：3，5，7-->
+		    <xs:enumeration value="3"></xs:enumeration>
+		    <xs:enumeration value="5"/>
+		    <xs:enumeration value="7"/>
+		   <!--  使用了这个类型的元素的值的取值范围为：0-100
+		   <xs:minExclusive value="0"></xs:minExclusive>
+		   <xs:maxInclusive value="100"></xs:maxInclusive>
+            -->
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:element name="person" type="mysimpleType"/>
+
+</xs:schema>

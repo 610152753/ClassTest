@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="姓名" type="xs:string"/>
+	<xs:element name="性别" type="xs:string"/>
+	<xs:element name="年龄" type="xs:int"/>
+	
+	<xs:attribute name="学号" type="xs:int"/>
+	
+	<xs:group name="mygroup">
+		<xs:sequence>
+			<xs:element ref="姓名"/>
+			<xs:element ref="性别"/>
+			<xs:element ref="年龄"/>
+		</xs:sequence>
+	</xs:group>
+
+    <xs:element name="学生">
+      <!-- 相当于内部类 -->
+	  <xs:complexType>
+			<xs:group ref="mygroup"/>
+			
+			
+			<xs:attribute ref="学号" use="required"/>
+			
+			<!--属性或者用下面的代码代替上面的属性代码，上面分开声明的 -->
+			<!--<xs:attribute name="学号" type="xs:int" use="required" ></xs:attribute> -->
+			
+			
+	  </xs:complexType>
+	</xs:element>
+	
+	
+	<xs:element name="学生手册">
+       <xs:complexType>
+         <xs:sequence maxOccurs="unbounded">
+           <xs:element ref="学生"></xs:element>
+         </xs:sequence> 
+       </xs:complexType>
+	</xs:element>
+	
+	
+</xs:schema>

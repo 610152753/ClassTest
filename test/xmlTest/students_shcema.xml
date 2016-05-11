@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<学生手册 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="students.xsd">
+ <学生 学号="02">
+		<姓名>张三</姓名>
+		<性别>女</性别>
+		<年龄>30</年龄>
+ </学生>
+	
+ <学生 学号="01">
+		<姓名>张三</姓名>
+		<性别>女</性别>
+		<年龄>30</年龄>
+  </学生>
+</学生手册>

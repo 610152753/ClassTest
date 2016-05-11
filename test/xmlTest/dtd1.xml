@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE NEWSPAPER SYSTEM "dtdnewspaper.dtd">
+<NEWSPAPER>
+	<ARTICLE AUTHOR="qiao" DATE="2010-10-10"  EDITION="aa" EDITOR="g" >
+		<HEADLINE/>
+		<BYLINE/>
+		<LEAD/>
+		<BODY/>
+		<NOTES/>
+	</ARTICLE>
+	
+	
+		<ARTICLE AUTHOR="qiao" DATE="2010-10-10"  EDITION="aa" EDITOR="w" >
+		<HEADLINE/>
+		<BYLINE/>
+		<LEAD/>
+		<BODY/>
+		<NOTES/>
+	</ARTICLE>
+	
+	
+</NEWSPAPER>

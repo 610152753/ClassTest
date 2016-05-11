@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<choiceTest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="choice_minOccurs_maxOccurs_complexType.xsd">
+	<hello/>
+	<hello/>
+	<world>1</world>
+</choiceTest>

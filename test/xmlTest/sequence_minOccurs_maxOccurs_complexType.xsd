@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:complexType name="mytype">
+		<xs:sequence minOccurs="1" maxOccurs="3">
+			<xs:element name="hello" type="xs:string"/>
+			<xs:element name="world" type="xs:integer"/>
+		</xs:sequence>
+		<!--按照顺序整体出现的次数 参照sequence_minOccurs_maxOccurs_complexType.xml -->
+	</xs:complexType>
+	<xs:element name="choiceTest" type="mytype"/>
+</xs:schema>
