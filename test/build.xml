@@ -17,9 +17,7 @@
 			<include name="*.jar"/>
 		</fileset>
 	</path>
-	
-	
-	
+
 	<target name="init" depends="clean">
 	  <mkdir dir= "${reportpath}"/>
 	  <mkdir dir="${compilepath}"/>
